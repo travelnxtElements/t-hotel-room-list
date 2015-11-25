@@ -1,0 +1,66 @@
+<link rel="import" href="../polymer/polymer.html">
+
+<dom-module id="t-hotel-room-policy-list">    
+    <template>            
+        <template is="dom-if" if="{{_policyLoading}}">
+            Please wait, we fetch policies for your selected itinerary.           
+        </template>
+        <template is="dom-if" if="{{_policyFailed}}">
+            Sorry we are having difficulties fetching policies of your selected room. Please select another.
+        </template>
+        <template is="dom-if" if="{{policies}}">
+            <template is="dom-repeat" items="{{_policyProvider.ajaxCall.lastResponse.rules}}">
+                <h3>[[item.type]]</h3>
+                <p>[[item.description]]</p>
+            </template>             
+        </template>    
+        <content select="#policyProvider"></content>             
+    </template>
+</dom-module>
+<script>
+    Polymer({
+        is: "t-hotel-room-policy-list",
+
+        properties: {
+            policies: Array
+        },
+
+        _policyProvider: null,
+
+        _policyLoading: false,
+
+        _policyFailed: false,
+
+        attached: function(){
+            this._checkAndSubscribeProvider();      
+        },
+
+        showPolicies: function(){
+            this._policyLoading = true;
+            this._policyProvider.getPolicies();
+        },
+
+        _checkAndSubscribeProvider: function(){    
+            this.set('_policyProvider', Polymer.dom(this).queryDistributedElements('#policyProvider')[0]);
+            if(!this._policyProvider){
+                console.error('no room list provider resolved with id #policyProvider');
+            }
+            if(typeof this._policyProvider.getPolicies != 'function'){
+                console.error('no "getPolicies" function is present in given policy provider');
+            }
+            this._policyProvider.addEventListener('room-policy-success', this._successCallback.bind(this));
+            this._policyProvider.addEventListener('room-policy-error', this._errorCallback.bind(this));
+        },
+
+        _successCallback: function(event){
+            this._policyLoading = false;      
+            this.policies = event.detail;      
+        },
+
+        _errorCallback: function(event){
+            this._policyLoading = false;
+            this._policyFailed = true
+            
+        }
+    }); 
+</script>

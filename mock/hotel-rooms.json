@@ -1,0 +1,992 @@
+{
+    "inventory": {
+        "rating": 4.0,
+        "address": "250 Franklin St Boston MA 02110 US",
+        "phoneNumber": "",
+        "distance": 0.25,
+        "description": "Property location with a stay at the langham, boston, you'll be centrally located in boston, minutes from rowes wharf and faneuil hall marketplace. This 4.5-star hotel is close to boston common and boston public garden.rooms make yourself at home in one of the 318 air-conditioned rooms featuring minibars and lcd televisions. Complimentary wireless internet access keeps you connected, and satellite programming is available for your entertainment. Private bathrooms have designer toiletries and complimentary toiletries. Conveniences include phones, as well as safes and desks.rec, spa, premium amenities relax at the full-service spa, where you can enjoy massages, body treatments, and facials. You're sure to appreciate the recreational amenities, including a health club, an indoor pool, and a spa tub. Additional amenities include complimentary wireless internet access, concierge services, and babysitting/childcare (surcharge).dining enjoy a meal at one of the hotel's dining establishments, which include 3 restaurants and a coffee shop/café. From your room, you can also access 24-hour room service. Relax with a refreshing drink at one of the 3 bars/lounges. Buffet breakfasts are available daily for a fee.business, other amenities featured amenities include high-speed (wired) internet access (surcharge), a business center, and express check-in.",
+        "descriptions": [{
+            "key": "Dining",
+            "value": "Satisfy your appetite at the hotel's restaurant, which serves breakfast, lunch, and brunch, or stay in and take advantage of 24-hour room service. Quench your thirst with your favorite drink at a bar/lounge."
+        }, {
+            "key": "Recreation",
+            "value": "The langham's health club and spa, chuan body + soul, includes a skylit lap pool and spa tub, cardiovascular and weight-training areas, and women's and men's locker rooms and saunas. Massage and personal-training services are available (surcharges), as well as a rejuvenation bar, and technogym equipment with lcd tvs and ipod technology. Three blocks away, boston harbor is home to whale-watching tours, harbor island cruises, and waterfront parks. The recreational activities listed below are available either on site or near the resort; fees may apply."
+        }, {
+            "key": "Spa",
+            "value": "Chuan body + soul spa has a 24-hour fitness center that includes a 6,000-square-foot health club with an indoor lap pool, spa tub, rejuvenation bar, and technogym equipment with lcd tvs and ipod technology. Guests can receive signature spa treatments (surcharge) based on traditional chinese medicine. Massage, body scrubs and wraps, and facials are among the offered treatments. Couple's treatments are also available in the chuan couple's treatment suite."
+        }],
+        "heroImageUrl": "http://d3mj096p5q0e20.cloudfront.net/ti/HCM/301172/2558_118_b.jpg",
+        "geoCode": "42.35625,-71.05457",
+        "amenities": [{
+            "type": "Hotel",
+            "description": "24-hour front desk"
+        }, {
+            "type": "Hotel",
+            "description": "Air conditioning"
+        }, {
+            "type": "Hotel",
+            "description": "ATM/banking"
+        }, {
+            "type": "Hotel",
+            "description": "Babysitting or childcare"
+        }, {
+            "type": "Hotel",
+            "description": "Babysitting or childcare (surcharge)"
+        }, {
+            "type": "Hotel",
+            "description": "Bathrobes"
+        }, {
+            "type": "Hotel",
+            "description": "Blackout drapes/curtains"
+        }, {
+            "type": "Room",
+            "description": "Breakfast available (surcharge)"
+        }, {
+            "type": "Hotel",
+            "description": "Business center"
+        }, {
+            "type": "Hotel",
+            "description": "Climate control"
+        }, {
+            "type": "Hotel",
+            "description": "Coffee shop or café"
+        }, {
+            "type": "Hotel",
+            "description": "Coffee/tea maker"
+        }, {
+            "type": "Hotel",
+            "description": "Concierge services"
+        }, {
+            "type": "Hotel",
+            "description": "Cribs/infant beds available"
+        }, {
+            "type": "Hotel",
+            "description": "Daily housekeeping"
+        }, {
+            "type": "Hotel",
+            "description": "Designer toiletries"
+        }, {
+            "type": "Hotel",
+            "description": "Desk"
+        }, {
+            "type": "Hotel",
+            "description": "Dry cleaning/laundry service"
+        }, {
+            "type": "Hotel",
+            "description": "Elevator/lift"
+        }, {
+            "type": "Hotel",
+            "description": "Express check-in"
+        }, {
+            "type": "Hotel",
+            "description": "Fitness Facility"
+        }, {
+            "type": "Hotel",
+            "description": "Fitness Facility"
+        }, {
+            "type": "Hotel",
+            "description": "Free newspaper"
+        }, {
+            "type": "Hotel",
+            "description": "Free newspapers in lobby"
+        }, {
+            "type": "Hotel",
+            "description": "Free toiletries"
+        }, {
+            "type": "Hotel",
+            "description": "Full-service spa"
+        }, {
+            "type": "Hotel",
+            "description": "Gift shops or newsstand"
+        }, {
+            "type": "Hotel",
+            "description": "Hair dryer"
+        }, {
+            "type": "Hotel",
+            "description": "Hypo-allergenic bedding available"
+        }, {
+            "type": "Hotel",
+            "description": "Indoor pool"
+        }, {
+            "type": "Hotel",
+            "description": "In-room safe"
+        }, {
+            "type": "Room",
+            "description": "Internet"
+        }, {
+            "type": "Room",
+            "description": "Internet"
+        }, {
+            "type": "Room",
+            "description": "Internet"
+        }, {
+            "type": "Hotel",
+            "description": "Iron/ironing board"
+        }, {
+            "type": "Hotel",
+            "description": "Laundry facilities"
+        }, {
+            "type": "Room",
+            "description": "LCD TV"
+        }, {
+            "type": "Hotel",
+            "description": "Luggage storage"
+        }, {
+            "type": "Hotel",
+            "description": "Minibar"
+        }, {
+            "type": "Hotel",
+            "description": "Multilingual staff"
+        }, {
+            "type": "Hotel",
+            "description": "Number of bars/lounges -3"
+        }, {
+            "type": "Hotel",
+            "description": "Number of floors -9"
+        }, {
+            "type": "Hotel",
+            "description": "One meeting room"
+        }, {
+            "type": "Hotel",
+            "description": "Phone"
+        }, {
+            "type": "Hotel",
+            "description": "Premium bedding"
+        }, {
+            "type": "Hotel",
+            "description": "Private bathroom"
+        }, {
+            "type": "Hotel",
+            "description": "Restaurant"
+        }, {
+            "type": "Hotel",
+            "description": "Rollaway/extra beds available"
+        }, {
+            "type": "Hotel",
+            "description": "Room service (24 hours)"
+        }, {
+            "type": "Room",
+            "description": "Satellite TV service"
+        }, {
+            "type": "Hotel",
+            "description": "Sauna"
+        }, {
+            "type": "Hotel",
+            "description": "Separate living room"
+        }, {
+            "type": "Hotel",
+            "description": "Shopping on site"
+        }, {
+            "type": "Hotel",
+            "description": "Smoke-free property"
+        }, {
+            "type": "Hotel",
+            "description": "Spa services on site"
+        }, {
+            "type": "Hotel",
+            "description": "Spa treatment room(s)"
+        }, {
+            "type": "Hotel",
+            "description": "Spa tub"
+        }, {
+            "type": "Hotel",
+            "description": "Terrace"
+        }, {
+            "type": "Hotel",
+            "description": "Total number of rooms -318"
+        }, {
+            "type": "Hotel",
+            "description": "Tours/ticket assistance"
+        }, {
+            "type": "Hotel",
+            "description": "Turndown service"
+        }, {
+            "type": "Hotel",
+            "description": "Vehicle Parking"
+        }, {
+            "type": "Hotel",
+            "description": "Wedding services"
+        }, {
+            "type": "Hotel",
+            "description": "Year Built1922"
+        }],
+        "photoUrls": ["http://d3mj096p5q0e20.cloudfront.net/fi/HCM/301172/2558_80_b.jpg", "http://d3mj096p5q0e20.cloudfront.net/fi/HCM/301172/2558_112_z.jpg", "http://d3mj096p5q0e20.cloudfront.net/fi/HCM/301172/2558_119_z.jpg", "http://d3mj096p5q0e20.cloudfront.net/fi/HCM/301172/2558_197_z.jpg", "http://d3mj096p5q0e20.cloudfront.net/fi/HCM/301172/2558_84_y.jpg", "http://d3mj096p5q0e20.cloudfront.net/fi/HCM/301172/2558_116_y.jpg", "http://d3mj096p5q0e20.cloudfront.net/fi/HCM/301172/2558_77_z.jpg", "http://d3mj096p5q0e20.cloudfront.net/fi/HCM/301172/2558_114_y.jpg", "http://d3mj096p5q0e20.cloudfront.net/fi/HCM/301172/2558_195_z.jpg", "http://d3mj096p5q0e20.cloudfront.net/fi/HCM/301172/2558_150_z.jpg", "http://d3mj096p5q0e20.cloudfront.net/fi/HCM/301172/2558_158_z.jpg", "http://d3mj096p5q0e20.cloudfront.net/fi/HCM/301172/2558_183_z.jpg", "http://d3mj096p5q0e20.cloudfront.net/fi/HCM/301172/2558_187_z.jpg", "http://d3mj096p5q0e20.cloudfront.net/fi/HCM/301172/2558_151_z.jpg", "http://d3mj096p5q0e20.cloudfront.net/fi/HCM/301172/2558_186_y.jpg", "http://d3mj096p5q0e20.cloudfront.net/fi/HCM/301172/2558_184_z.jpg", "http://d3mj096p5q0e20.cloudfront.net/fi/HCM/301172/2558_155_z.jpg", "http://d3mj096p5q0e20.cloudfront.net/fi/HCM/301172/2558_159_z.jpg", "http://d3mj096p5q0e20.cloudfront.net/fi/HCM/301172/2558_139_z.jpg", "http://d3mj096p5q0e20.cloudfront.net/fi/HCM/301172/2558_148_z.jpg", "http://d3mj096p5q0e20.cloudfront.net/fi/HCM/301172/2558_145_z.jpg", "http://d3mj096p5q0e20.cloudfront.net/fi/HCM/301172/2558_182_y.jpg", "http://d3mj096p5q0e20.cloudfront.net/fi/HCM/301172/2558_149_z.jpg", "http://d3mj096p5q0e20.cloudfront.net/fi/HCM/301172/2558_178_z.jpg", "http://d3mj096p5q0e20.cloudfront.net/fi/HCM/301172/2558_143_z.jpg", "http://d3mj096p5q0e20.cloudfront.net/fi/HCM/301172/2558_177_z.jpg", "http://d3mj096p5q0e20.cloudfront.net/fi/HCM/301172/2558_156_z.jpg", "http://d3mj096p5q0e20.cloudfront.net/fi/HCM/301172/2558_181_y.jpg", "http://d3mj096p5q0e20.cloudfront.net/fi/HCM/301172/2558_154_z.jpg", "http://d3mj096p5q0e20.cloudfront.net/fi/HCM/301172/2558_176_z.jpg", "http://d3mj096p5q0e20.cloudfront.net/fi/HCM/301172/2558_111_y.jpg", "http://d3mj096p5q0e20.cloudfront.net/fi/HCM/301172/2558_193_z.jpg", "http://d3mj096p5q0e20.cloudfront.net/fi/HCM/301172/2558_185_z.jpg", "http://d3mj096p5q0e20.cloudfront.net/fi/HCM/301172/2558_191_z.jpg", "http://d3mj096p5q0e20.cloudfront.net/fi/HCM/301172/2558_198_z.jpg", "http://d3mj096p5q0e20.cloudfront.net/fi/HCM/301172/2558_189_z.jpg", "http://d3mj096p5q0e20.cloudfront.net/fi/HCM/301172/2558_144_z.jpg", "http://d3mj096p5q0e20.cloudfront.net/fi/HCM/301172/2558_166_z.jpg", "http://d3mj096p5q0e20.cloudfront.net/fi/HCM/301172/2558_152_z.jpg", "http://d3mj096p5q0e20.cloudfront.net/fi/HCM/301172/2558_138_z.jpg", "http://d3mj096p5q0e20.cloudfront.net/fi/HCM/301172/2558_196_z.jpg", "http://d3mj096p5q0e20.cloudfront.net/fi/HCM/301172/2558_203_z.jpg", "http://d3mj096p5q0e20.cloudfront.net/fi/HCM/301172/2558_200_z.jpg", "http://d3mj096p5q0e20.cloudfront.net/fi/HCM/301172/2558_199_z.jpg", "http://d3mj096p5q0e20.cloudfront.net/fi/HCM/301172/2558_204_z.jpg", "http://d3mj096p5q0e20.cloudfront.net/fi/HCM/301172/2558_206_z.jpg", "http://d3mj096p5q0e20.cloudfront.net/fi/HCM/301172/2558_207_z.jpg", "http://d3mj096p5q0e20.cloudfront.net/fi/HCM/301172/2558_208_z.jpg", "http://d3mj096p5q0e20.cloudfront.net/fi/HCM/301172/2558_209_z.jpg", "http://d3mj096p5q0e20.cloudfront.net/fi/HCM/301172/2558_205_z.jpg", "http://d3mj096p5q0e20.cloudfront.net/fi/HCM/301172/2558_210_z.jpg", "http://d3mj096p5q0e20.cloudfront.net/fi/HCM/301172/2558_211_z.jpg", "http://d3mj096p5q0e20.cloudfront.net/fi/HCM/301172/2558_214_z.jpg", "http://d3mj096p5q0e20.cloudfront.net/fi/HCM/301172/2558_212_z.jpg", "http://d3mj096p5q0e20.cloudfront.net/fi/HCM/301172/2558_213_z.jpg", "http://d3mj096p5q0e20.cloudfront.net/fi/HCM/301172/2558_215_y.jpg", "http://d3mj096p5q0e20.cloudfront.net/fi/HCM/301172/2558_216_z.jpg", "http://d3mj096p5q0e20.cloudfront.net/fi/HCM/301172/2558_217_z.jpg", "http://d3mj096p5q0e20.cloudfront.net/fi/HCM/301172/2558_218_z.jpg", "http://d3mj096p5q0e20.cloudfront.net/fi/HCM/301172/2558_219_z.jpg", "http://d3mj096p5q0e20.cloudfront.net/fi/HCM/301172/2558_220_z.jpg"],
+        "pointsOfInterest": ["Boston MA (BOS Logan Intl)"],
+        "minFare": {
+            "areRatesAvailable": false,
+            "fare": {
+                "amount": 0.0,
+                "currency": null,
+                "displayAmount": "$0.00",
+                "type": null
+            },
+            "equivalentFares": [],
+            "equivalents": null
+        },
+        "rooms": [{
+            "id": "MTExX19TSU1QTEVTVEEyfDF8MTpBOjI1fF9fMzAxMTcyX18zMDkuNjBfX3wxfDE6QToyNXxfX0RPVUJMRSBTVVBFUklPUiAtIFJPT00gT05MWURPVUJMRSBTVVBFUklPUiAtIFJPT00gT05MWTF8MXwxOkE6MjV8",
+            "name": "DOUBLE SUPERIOR - ROOM ONLY",
+            "description": "DOUBLE SUPERIOR - ROOM ONLY",
+            "quantity": 1,
+            "isPrepaid": true,
+            "guaranteeRequired": false,
+            "depositRequired": false,
+            "policies": [{
+                "description": "Know before you go a resort fee is included in the total price displayed. Children 17 years old and younger stay free when occupying the parent or guardian's room, using existing bedding. Fees the following fees and deposits are charged by the property at time of service, check-in, or check-out. Fee for buffet breakfast: usd 29.00 for adults and usd 16.00 for children (approximately) fee for in-room high-speed internet (wired): usd 17.95 per day (rates may vary) fee for high-speed internet (wired) in public areas: usd 17.95 per day (rates may vary) valet parking fee: usd 46.00 per day (in/out privileges) rollaway beds are available for an additional fee the above list may not be comprehensive. Fees and deposits may not include tax and are subject to change. Mandatory fees and taxes       the charges below are included in your overall room price:resort fee   we have included all charges provided to us by the property. However, charges can vary, for example, based on length of stay or the room you book.",
+                "isQuantifiable": false,
+                "window": null,
+                "penalty": null,
+                "type": "General"
+            }],
+            "fare": {
+                "type": "Negotiated",
+                "code": null,
+                "isRefundable": true,
+                "components": [{
+                    "money": {
+                        "amount": 281.45,
+                        "currency": "USD",
+                        "displayAmount": "$281.45",
+                        "type": "USD"
+                    },
+                    "components": [],
+                    "type": "BaseFare",
+                    "properties": []
+                }, {
+                    "money": {
+                        "amount": 28.14,
+                        "currency": "USD",
+                        "displayAmount": "$28.14",
+                        "type": "USD"
+                    },
+                    "components": [],
+                    "type": "ConsolidatorFee",
+                    "properties": [{
+                        "key": "Type",
+                        "value": "Agency"
+                    }, {
+                        "key": "IsRefundable",
+                        "value": "False"
+                    }]
+                }, {
+                    "money": {
+                        "amount": 309.60,
+                        "currency": "USD",
+                        "displayAmount": "$309.60",
+                        "type": "USD"
+                    },
+                    "components": [],
+                    "type": "TotalFare",
+                    "properties": []
+                }, {
+                    "money": {
+                        "amount": 28.14,
+                        "currency": "USD",
+                        "displayAmount": "$28.14",
+                        "type": "USD"
+                    },
+                    "components": [],
+                    "type": "TotalFee",
+                    "properties": []
+                }, {
+                    "money": {
+                        "amount": 0.0,
+                        "currency": "USD",
+                        "displayAmount": "$0.00",
+                        "type": "USD"
+                    },
+                    "components": [],
+                    "type": "TotalTax",
+                    "properties": []
+                }, {
+                    "money": {
+                        "amount": 0.0,
+                        "currency": "USD",
+                        "displayAmount": "$0.00",
+                        "type": "USD"
+                    },
+                    "components": [],
+                    "type": "TotalDiscount",
+                    "properties": []
+                }],
+                "equivalents": null
+            },
+            "type": "SIMPLESTA2|1|1:A:25|",
+            "roomOccupancyTypes": ["|1|1:A:25|"],
+            "dailyRates": [{
+                "day": "all",
+                "amount": 0.0,
+                "currency": null,
+                "displayAmount": " 0",
+                "type": null
+            }],
+            "inclusions": ["ROOM ONLY"],
+            "isPreferred": false,
+            "deals": null,
+            "source": {
+                "inventoryId": "MTExX19TSU1QTEVTVEEyfDF8MTpBOjI1fF9fMzAxMTcyX18zMDkuNjBfX3wxfDE6QToyNXxfX0RPVUJMRSBTVVBFUklPUiAtIFJPT00gT05MWURPVUJMRSBTVVBFUklPUiAtIFJPT00gT05MWTF8MXwxOkE6MjV8",
+                "id": 111,
+                "name": "HotelBeds Test"
+            },
+            "areExtraTaxesApplicable": true,
+            "numberOfAvailableRooms": 1
+        }, {
+            "id": "MTExX19TSU1QTEVDT018MXwxOkE6MjV8X18zMDExNzJfXzQ2MS4yMV9ffDF8MTpBOjI1fF9fRE9VQkxFIENMQVNTSUMgLSBST09NIE9OTFlET1VCTEUgQ0xBU1NJQyAtIFJPT00gT05MWTF8MXwxOkE6MjV8",
+            "name": "DOUBLE CLASSIC - ROOM ONLY",
+            "description": "DOUBLE CLASSIC - ROOM ONLY",
+            "quantity": 1,
+            "isPrepaid": true,
+            "guaranteeRequired": false,
+            "depositRequired": false,
+            "policies": [{
+                "description": "Know before you go a resort fee is included in the total price displayed. Children 17 years old and younger stay free when occupying the parent or guardian's room, using existing bedding. Fees the following fees and deposits are charged by the property at time of service, check-in, or check-out. Fee for buffet breakfast: usd 29.00 for adults and usd 16.00 for children (approximately) fee for in-room high-speed internet (wired): usd 17.95 per day (rates may vary) fee for high-speed internet (wired) in public areas: usd 17.95 per day (rates may vary) valet parking fee: usd 46.00 per day (in/out privileges) rollaway beds are available for an additional fee the above list may not be comprehensive. Fees and deposits may not include tax and are subject to change. Mandatory fees and taxes       the charges below are included in your overall room price:resort fee   we have included all charges provided to us by the property. However, charges can vary, for example, based on length of stay or the room you book.",
+                "isQuantifiable": false,
+                "window": null,
+                "penalty": null,
+                "type": "General"
+            }],
+            "fare": {
+                "type": "Negotiated",
+                "code": null,
+                "isRefundable": true,
+                "components": [{
+                    "money": {
+                        "amount": 419.28,
+                        "currency": "USD",
+                        "displayAmount": "$419.28",
+                        "type": "USD"
+                    },
+                    "components": [],
+                    "type": "BaseFare",
+                    "properties": []
+                }, {
+                    "money": {
+                        "amount": 41.93,
+                        "currency": "USD",
+                        "displayAmount": "$41.93",
+                        "type": "USD"
+                    },
+                    "components": [],
+                    "type": "ConsolidatorFee",
+                    "properties": [{
+                        "key": "Type",
+                        "value": "Agency"
+                    }, {
+                        "key": "IsRefundable",
+                        "value": "False"
+                    }]
+                }, {
+                    "money": {
+                        "amount": 461.21,
+                        "currency": "USD",
+                        "displayAmount": "$461.21",
+                        "type": "USD"
+                    },
+                    "components": [],
+                    "type": "TotalFare",
+                    "properties": []
+                }, {
+                    "money": {
+                        "amount": 41.93,
+                        "currency": "USD",
+                        "displayAmount": "$41.93",
+                        "type": "USD"
+                    },
+                    "components": [],
+                    "type": "TotalFee",
+                    "properties": []
+                }, {
+                    "money": {
+                        "amount": 0.0,
+                        "currency": "USD",
+                        "displayAmount": "$0.00",
+                        "type": "USD"
+                    },
+                    "components": [],
+                    "type": "TotalTax",
+                    "properties": []
+                }, {
+                    "money": {
+                        "amount": 0.0,
+                        "currency": "USD",
+                        "displayAmount": "$0.00",
+                        "type": "USD"
+                    },
+                    "components": [],
+                    "type": "TotalDiscount",
+                    "properties": []
+                }],
+                "equivalents": null
+            },
+            "type": "SIMPLECOM|1|1:A:25|",
+            "roomOccupancyTypes": ["|1|1:A:25|"],
+            "dailyRates": [{
+                "day": "all",
+                "amount": 0.0,
+                "currency": null,
+                "displayAmount": " 0",
+                "type": null
+            }],
+            "inclusions": ["ROOM ONLY"],
+            "isPreferred": false,
+            "deals": null,
+            "source": {
+                "inventoryId": "MTExX19TSU1QTEVDT018MXwxOkE6MjV8X18zMDExNzJfXzQ2MS4yMV9ffDF8MTpBOjI1fF9fRE9VQkxFIENMQVNTSUMgLSBST09NIE9OTFlET1VCTEUgQ0xBU1NJQyAtIFJPT00gT05MWTF8MXwxOkE6MjV8",
+                "id": 111,
+                "name": "HotelBeds Test"
+            },
+            "areExtraTaxesApplicable": true,
+            "numberOfAvailableRooms": 9
+        }, {
+            "id": "MTE1X18yMDA3MjQ2MDRfXzMwMTE3Ml9fNTUyLjEyX198MXwxOkE6MjV8X19TdXBlcmlvciBSb29tLCAxIEtpbmcgQmVkU3VwZXJpb3IgUm9vbSwgMSBLaW5nIEJlZFJhdGUgVHlwZTogUHJlcGFpZCBGYXJlIFJlZnVuZGFibGUgRmFyZTF8MXwxOkE6MjV8",
+            "name": "Superior Room, 1 King Bed",
+            "description": "Superior Room, 1 King BedRate Type: Prepaid Fare Refundable Fare",
+            "quantity": 1,
+            "isPrepaid": true,
+            "guaranteeRequired": false,
+            "depositRequired": false,
+            "policies": [{
+                "description": "We understand that sometimes your travel plans change. We do not charge a change or cancel fee. However, this property (The Langham, Boston) imposes the following penalty to its customers that we are required to pass on: Cancellations or changes made after 11:59 AM ((GMT-05:00) Eastern Time (US &amp; Canada)) on Nov 30, 2015 are subject to a 1 Night Room &amp; Tax penalty. The property makes no refunds for no shows or early checkouts.",
+                "isQuantifiable": false,
+                "window": null,
+                "penalty": null,
+                "type": "Cancellation"
+            }, {
+                "description": "By proceeding with this reservation, you agree to all terms and conditions, which include the Cancellation Policy and all terms and conditions contained in the User Agreement.  You agree to pay the cost of your reservation. If you do not pay this debt and it is collected through the use of a collection agency, an attorney, or through other legal proceedings, you agree to pay all reasonable costs or fees, including attorney fees and court costs, incurred in connection with such collection effort.",
+                "isQuantifiable": false,
+                "window": null,
+                "penalty": null,
+                "type": "Disclaimer"
+            }, {
+                "description": "Total amount will be charged by the ean after the booking.",
+                "isQuantifiable": false,
+                "window": null,
+                "penalty": null,
+                "type": "Charging"
+            }, {
+                "description": "Know before you go a resort fee is included in the total price displayed. Children 17 years old and younger stay free when occupying the parent or guardian's room, using existing bedding. Fees the following fees and deposits are charged by the property at time of service, check-in, or check-out. Fee for buffet breakfast: usd 29.00 for adults and usd 16.00 for children (approximately) fee for in-room high-speed internet (wired): usd 17.95 per day (rates may vary) fee for high-speed internet (wired) in public areas: usd 17.95 per day (rates may vary) valet parking fee: usd 46.00 per day (in/out privileges) rollaway beds are available for an additional fee the above list may not be comprehensive. Fees and deposits may not include tax and are subject to change. Mandatory fees and taxes       the charges below are included in your overall room price:resort fee   we have included all charges provided to us by the property. However, charges can vary, for example, based on length of stay or the room you book.",
+                "isQuantifiable": false,
+                "window": null,
+                "penalty": null,
+                "type": "General"
+            }],
+            "fare": {
+                "type": "Negotiated",
+                "code": null,
+                "isRefundable": true,
+                "components": [{
+                    "money": {
+                        "amount": 474.0,
+                        "currency": "USD",
+                        "displayAmount": "$474.00",
+                        "type": "USD"
+                    },
+                    "components": [],
+                    "type": "BaseFare",
+                    "properties": []
+                }, {
+                    "money": {
+                        "amount": 78.12,
+                        "currency": "USD",
+                        "displayAmount": "$78.12",
+                        "type": "USD"
+                    },
+                    "components": [],
+                    "type": "Tax",
+                    "properties": [{
+                        "key": "Type",
+                        "value": null
+                    }, {
+                        "key": "Code",
+                        "value": null
+                    }, {
+                        "key": "Description",
+                        "value": "TaxAndServiceFee"
+                    }]
+                }, {
+                    "money": {
+                        "amount": 552.12,
+                        "currency": "USD",
+                        "displayAmount": "$552.12",
+                        "type": "USD"
+                    },
+                    "components": [],
+                    "type": "TotalFare",
+                    "properties": []
+                }, {
+                    "money": {
+                        "amount": 0.0,
+                        "currency": "USD",
+                        "displayAmount": "$0.00",
+                        "type": "USD"
+                    },
+                    "components": [],
+                    "type": "TotalFee",
+                    "properties": []
+                }, {
+                    "money": {
+                        "amount": 78.12,
+                        "currency": "USD",
+                        "displayAmount": "$78.12",
+                        "type": "USD"
+                    },
+                    "components": [],
+                    "type": "TotalTax",
+                    "properties": []
+                }, {
+                    "money": {
+                        "amount": 0.0,
+                        "currency": "USD",
+                        "displayAmount": "$0.00",
+                        "type": "USD"
+                    },
+                    "components": [],
+                    "type": "TotalDiscount",
+                    "properties": []
+                }],
+                "equivalents": null
+            },
+            "type": "200724604",
+            "roomOccupancyTypes": ["|1|1:A:25|"],
+            "dailyRates": [{
+                "day": "all",
+                "amount": 0.0,
+                "currency": null,
+                "displayAmount": " 0",
+                "type": null
+            }],
+            "inclusions": null,
+            "isPreferred": false,
+            "deals": null,
+            "source": {
+                "inventoryId": "MTE1X18yMDA3MjQ2MDRfXzMwMTE3Ml9fNTUyLjEyX198MXwxOkE6MjV8X19TdXBlcmlvciBSb29tLCAxIEtpbmcgQmVkU3VwZXJpb3IgUm9vbSwgMSBLaW5nIEJlZFJhdGUgVHlwZTogUHJlcGFpZCBGYXJlIFJlZnVuZGFibGUgRmFyZTF8MXwxOkE6MjV8",
+                "id": 115,
+                "name": "HotelsCom Test"
+            },
+            "areExtraTaxesApplicable": false,
+            "numberOfAvailableRooms": 0
+        }, {
+            "id": "MTAzX18zMTQ2XzEyODdfMTI4N18zXzFfMF9fMzAxMTcyX182MjguNzVfX3wxfDE6QToyNXxfX0NsYXNzaWNDbGFzc2ljIHdpdGggMSBiZWQocykxfDF8MTpBOjI1fA--",
+            "name": "Classic",
+            "description": "Classic with 1 bed(s)",
+            "quantity": 1,
+            "isPrepaid": true,
+            "guaranteeRequired": false,
+            "depositRequired": false,
+            "policies": [{
+                "description": "Know before you go a resort fee is included in the total price displayed. Children 17 years old and younger stay free when occupying the parent or guardian's room, using existing bedding. Fees the following fees and deposits are charged by the property at time of service, check-in, or check-out. Fee for buffet breakfast: usd 29.00 for adults and usd 16.00 for children (approximately) fee for in-room high-speed internet (wired): usd 17.95 per day (rates may vary) fee for high-speed internet (wired) in public areas: usd 17.95 per day (rates may vary) valet parking fee: usd 46.00 per day (in/out privileges) rollaway beds are available for an additional fee the above list may not be comprehensive. Fees and deposits may not include tax and are subject to change. Mandatory fees and taxes       the charges below are included in your overall room price:resort fee   we have included all charges provided to us by the property. However, charges can vary, for example, based on length of stay or the room you book.",
+                "isQuantifiable": false,
+                "window": null,
+                "penalty": null,
+                "type": "General"
+            }],
+            "fare": {
+                "type": "Published",
+                "code": null,
+                "isRefundable": true,
+                "components": [{
+                    "money": {
+                        "amount": 505.68,
+                        "currency": "USD",
+                        "displayAmount": "$505.68",
+                        "type": "USD"
+                    },
+                    "components": [],
+                    "type": "BaseFare",
+                    "properties": []
+                }, {
+                    "money": {
+                        "amount": 50.00,
+                        "currency": "USD",
+                        "displayAmount": "$50.00",
+                        "type": "USD"
+                    },
+                    "components": [],
+                    "type": "ConsolidatorFee",
+                    "properties": [{
+                        "key": "Type",
+                        "value": "Agency"
+                    }, {
+                        "key": "IsRefundable",
+                        "value": "False"
+                    }]
+                }, {
+                    "money": {
+                        "amount": 73.07,
+                        "currency": "USD",
+                        "displayAmount": "$73.07",
+                        "type": "USD"
+                    },
+                    "components": [],
+                    "type": "Tax",
+                    "properties": [{
+                        "key": "Type",
+                        "value": null
+                    }, {
+                        "key": "Code",
+                        "value": null
+                    }, {
+                        "key": "Description",
+                        "value": "TotalTaxes"
+                    }]
+                }, {
+                    "money": {
+                        "amount": 628.75,
+                        "currency": "USD",
+                        "displayAmount": "$628.75",
+                        "type": "USD"
+                    },
+                    "components": [],
+                    "type": "TotalFare",
+                    "properties": []
+                }, {
+                    "money": {
+                        "amount": 50.00,
+                        "currency": "USD",
+                        "displayAmount": "$50.00",
+                        "type": "USD"
+                    },
+                    "components": [],
+                    "type": "TotalFee",
+                    "properties": []
+                }, {
+                    "money": {
+                        "amount": 73.07,
+                        "currency": "USD",
+                        "displayAmount": "$73.07",
+                        "type": "USD"
+                    },
+                    "components": [],
+                    "type": "TotalTax",
+                    "properties": []
+                }, {
+                    "money": {
+                        "amount": 0.0,
+                        "currency": "USD",
+                        "displayAmount": "$0.00",
+                        "type": "USD"
+                    },
+                    "components": [],
+                    "type": "TotalDiscount",
+                    "properties": []
+                }],
+                "equivalents": null
+            },
+            "type": "3146_1287_1287_3_1_0",
+            "roomOccupancyTypes": ["|1|1:A:25|"],
+            "dailyRates": [{
+                "day": "all",
+                "amount": 0.0,
+                "currency": null,
+                "displayAmount": " 0",
+                "type": null
+            }],
+            "inclusions": null,
+            "isPreferred": false,
+            "deals": null,
+            "source": {
+                "inventoryId": "MTAzX18zMTQ2XzEyODdfMTI4N18zXzFfMF9fMzAxMTcyX182MjguNzVfX3wxfDE6QToyNXxfX0NsYXNzaWNDbGFzc2ljIHdpdGggMSBiZWQocykxfDF8MTpBOjI1fA--",
+                "id": 103,
+                "name": "TouricoTGS Test"
+            },
+            "areExtraTaxesApplicable": false,
+            "numberOfAvailableRooms": 0
+        }, {
+            "id": "MTE1X18yMDA3MjQ2MDRfXzMwMTE3Ml9fNzM0Ljk3X198MXwxOkE6MjV8X19TdXBlcmlvciBSb29tLCAxIEtpbmcgQmVkU3VwZXJpb3IgUm9vbSwgMSBLaW5nIEJlZFJhdGUgVHlwZTogUHJlcGFpZCBGYXJlIE5vbi1SZWZ1bmRhYmxlIEZhcmUwfDF8MTpBOjI1fA--",
+            "name": "Superior Room, 1 King Bed",
+            "description": "Superior Room, 1 King BedRate Type: Prepaid Fare Non-Refundable Fare",
+            "quantity": 1,
+            "isPrepaid": true,
+            "guaranteeRequired": false,
+            "depositRequired": false,
+            "policies": [{
+                "description": "This rate is non-refundable and cannot be changed or cancelled - if you do choose to change or cancel this booking you will not be refunded any of the payment.",
+                "isQuantifiable": false,
+                "window": null,
+                "penalty": null,
+                "type": "Cancellation"
+            }, {
+                "description": "By proceeding with this reservation, you agree to all terms and conditions, which include the Cancellation Policy and all terms and conditions contained in the User Agreement.  You agree to pay the cost of your reservation. If you do not pay this debt and it is collected through the use of a collection agency, an attorney, or through other legal proceedings, you agree to pay all reasonable costs or fees, including attorney fees and court costs, incurred in connection with such collection effort.",
+                "isQuantifiable": false,
+                "window": null,
+                "penalty": null,
+                "type": "Disclaimer"
+            }, {
+                "description": "Total amount will be charged by the ean after the booking.",
+                "isQuantifiable": false,
+                "window": null,
+                "penalty": null,
+                "type": "Charging"
+            }, {
+                "description": "Know before you go a resort fee is included in the total price displayed. Children 17 years old and younger stay free when occupying the parent or guardian's room, using existing bedding. Fees the following fees and deposits are charged by the property at time of service, check-in, or check-out. Fee for buffet breakfast: usd 29.00 for adults and usd 16.00 for children (approximately) fee for in-room high-speed internet (wired): usd 17.95 per day (rates may vary) fee for high-speed internet (wired) in public areas: usd 17.95 per day (rates may vary) valet parking fee: usd 46.00 per day (in/out privileges) rollaway beds are available for an additional fee the above list may not be comprehensive. Fees and deposits may not include tax and are subject to change. Mandatory fees and taxes       the charges below are included in your overall room price:resort fee   we have included all charges provided to us by the property. However, charges can vary, for example, based on length of stay or the room you book.",
+                "isQuantifiable": false,
+                "window": null,
+                "penalty": null,
+                "type": "General"
+            }],
+            "fare": {
+                "type": "Negotiated",
+                "code": null,
+                "isRefundable": false,
+                "components": [{
+                    "money": {
+                        "amount": 653.16,
+                        "currency": "USD",
+                        "displayAmount": "$653.16",
+                        "type": "USD"
+                    },
+                    "components": [],
+                    "type": "BaseFare",
+                    "properties": []
+                }, {
+                    "money": {
+                        "amount": 81.81,
+                        "currency": "USD",
+                        "displayAmount": "$81.81",
+                        "type": "USD"
+                    },
+                    "components": [],
+                    "type": "Tax",
+                    "properties": [{
+                        "key": "Type",
+                        "value": null
+                    }, {
+                        "key": "Code",
+                        "value": null
+                    }, {
+                        "key": "Description",
+                        "value": "TaxAndServiceFee"
+                    }]
+                }, {
+                    "money": {
+                        "amount": 734.97,
+                        "currency": "USD",
+                        "displayAmount": "$734.97",
+                        "type": "USD"
+                    },
+                    "components": [],
+                    "type": "TotalFare",
+                    "properties": []
+                }, {
+                    "money": {
+                        "amount": 0.0,
+                        "currency": "USD",
+                        "displayAmount": "$0.00",
+                        "type": "USD"
+                    },
+                    "components": [],
+                    "type": "TotalFee",
+                    "properties": []
+                }, {
+                    "money": {
+                        "amount": 81.81,
+                        "currency": "USD",
+                        "displayAmount": "$81.81",
+                        "type": "USD"
+                    },
+                    "components": [],
+                    "type": "TotalTax",
+                    "properties": []
+                }, {
+                    "money": {
+                        "amount": 0.0,
+                        "currency": "USD",
+                        "displayAmount": "$0.00",
+                        "type": "USD"
+                    },
+                    "components": [],
+                    "type": "TotalDiscount",
+                    "properties": []
+                }],
+                "equivalents": null
+            },
+            "type": "200724604",
+            "roomOccupancyTypes": ["|1|1:A:25|"],
+            "dailyRates": [{
+                "day": "all",
+                "amount": 0.0,
+                "currency": null,
+                "displayAmount": " 0",
+                "type": null
+            }],
+            "inclusions": null,
+            "isPreferred": false,
+            "deals": null,
+            "source": {
+                "inventoryId": "MTE1X18yMDA3MjQ2MDRfXzMwMTE3Ml9fNzM0Ljk3X198MXwxOkE6MjV8X19TdXBlcmlvciBSb29tLCAxIEtpbmcgQmVkU3VwZXJpb3IgUm9vbSwgMSBLaW5nIEJlZFJhdGUgVHlwZTogUHJlcGFpZCBGYXJlIE5vbi1SZWZ1bmRhYmxlIEZhcmUwfDF8MTpBOjI1fA--",
+                "id": 115,
+                "name": "HotelsCom Test"
+            },
+            "areExtraTaxesApplicable": false,
+            "numberOfAvailableRooms": 0
+        }],
+        "brand": {
+            "code": "2585",
+            "name": "Langham Hotels",
+            "logo": null
+        },
+        "type": "Hotel",
+        "propertyId": "301172",
+        "moreRoomsAvailable": false,
+        "brandAvailablility": true,
+        "deal": null,
+        "stayDuration": {
+            "start": {
+                "date": "Tue, 01 Dec, 2015",
+                "time": "12:00 AM",
+                "systemDateTime": "2015-12-01T00:00:00"
+            },
+            "end": {
+                "date": "Wed, 02 Dec, 2015",
+                "time": "12:00 AM",
+                "systemDateTime": "2015-12-02T00:00:00"
+            }
+        },
+        "isCancellable": true,
+        "allPassengersInfoRequired": false,
+        "isGuaranteeRequired": true,
+        "id": "301172",
+        "name": "The Langham, Boston",
+        "fare": {
+            "type": null,
+            "code": null,
+            "isRefundable": false,
+            "components": [{
+                "money": {
+                    "amount": 2333.57,
+                    "currency": "USD",
+                    "displayAmount": "$2,333.57",
+                    "type": "USD"
+                },
+                "components": [],
+                "type": "BaseFare",
+                "properties": []
+            }, {
+                "money": {
+                    "amount": 2686.65,
+                    "currency": "USD",
+                    "displayAmount": "$2,686.65",
+                    "type": "USD"
+                },
+                "components": [],
+                "type": "TotalFare",
+                "properties": []
+            }, {
+                "money": {
+                    "amount": 120.07,
+                    "currency": "USD",
+                    "displayAmount": "$120.07",
+                    "type": "USD"
+                },
+                "components": [],
+                "type": "TotalFee",
+                "properties": []
+            }, {
+                "money": {
+                    "amount": 233.00,
+                    "currency": "USD",
+                    "displayAmount": "$233.00",
+                    "type": "USD"
+                },
+                "components": [],
+                "type": "TotalTax",
+                "properties": []
+            }, {
+                "money": {
+                    "amount": 0.0,
+                    "currency": "USD",
+                    "displayAmount": "$0.00",
+                    "type": "USD"
+                },
+                "components": [],
+                "type": "TotalDiscount",
+                "properties": []
+            }],
+            "equivalents": null
+        },
+        "fareWithAddOns": {
+            "type": null,
+            "code": null,
+            "isRefundable": false,
+            "components": [{
+                "money": {
+                    "amount": 2333.57,
+                    "currency": "USD",
+                    "displayAmount": "$2,333.57",
+                    "type": "USD"
+                },
+                "components": [],
+                "type": "BaseFare",
+                "properties": []
+            }, {
+                "money": {
+                    "amount": 2686.65,
+                    "currency": "USD",
+                    "displayAmount": "$2,686.65",
+                    "type": "USD"
+                },
+                "components": [],
+                "type": "TotalFare",
+                "properties": []
+            }, {
+                "money": {
+                    "amount": 120.07,
+                    "currency": "USD",
+                    "displayAmount": "$120.07",
+                    "type": "USD"
+                },
+                "components": [],
+                "type": "TotalFee",
+                "properties": []
+            }, {
+                "money": {
+                    "amount": 233.00,
+                    "currency": "USD",
+                    "displayAmount": "$233.00",
+                    "type": "USD"
+                },
+                "components": [],
+                "type": "TotalTax",
+                "properties": []
+            }, {
+                "money": {
+                    "amount": 0.0,
+                    "currency": "USD",
+                    "displayAmount": "$0.00",
+                    "type": "USD"
+                },
+                "components": [],
+                "type": "TotalDiscount",
+                "properties": []
+            }],
+            "equivalents": null
+        },
+        "isPostPaid": false,
+        "isSoldOut": false,
+        "isPreferred": false,
+        "addOns": null,
+        "preferredSortOrder": 0,
+        "source": {
+            "inventoryId": "301172",
+            "id": 115,
+            "name": "HotelsCom Test"
+        },
+        "restrictions": null
+    },
+    "roomOccupancyTypes": [{
+        "passengerTypeQuantities": [{
+            "quantity": 1,
+            "type": "Adult",
+            "ages": [25]
+        }],
+        "code": "|1|1:A:25|"
+    }],
+    "searchId": "9cd066ab-f34c-4b23-a87b-d93921d207ed",
+    "status": {
+        "isSuccessful": true,
+        "code": 200,
+        "message": "Successful",
+        "referenceId": "a4e0324b-10db-4362-8bfd-9656467d72c5",
+        "additionalMessages": []
+    }
+}

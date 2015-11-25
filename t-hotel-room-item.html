@@ -1,0 +1,123 @@
+<link rel="import" href="../polymer/polymer.html">
+<link rel="import" href="../iron-flex-layout/classes/iron-flex-layout.html">
+
+<link rel="import" href="../t-button/t-button.html" />
+<link rel="import" href="../t-badge/t-badge.html" />
+<link rel="import" href="../t-text-container/t-text-container.html">
+<link rel="import" href="../t-shared-lib/t-fare-behavior.html">
+
+<dom-module id="t-hotel-room-item">
+    <style>
+        :host {
+            display: block;
+        }
+        .discount{
+            text-decoration: line-through;
+        }
+        t-badge {
+            margin-top: 10px;
+        }
+        .pricing{
+            text-align: right;
+        }
+        .min-width{
+            min-width: 10px;
+        }
+        .first-section{
+            margin-bottom: 10px;
+        }
+        t-text-container{
+            padding: 10px;
+            display: inline-block;
+        }
+        t-button{
+            font-size: 14px;
+        }
+        t-button ::content paper-button{
+            padding: 5px 10px;
+        }
+    </style>
+    <template>            
+        <template is="dom-repeat" items="{{room.deals}}">
+            <div class="layout horizontal">
+                <t-badge label="{{item.name}}"></t-badge>
+            </div>            
+        </template>        
+        <t-text-container>
+            <div class="layout horizontal start first-section">
+                <div class="roomDetails font-16 primary-text">[[room.name]]</div>
+                [[room.description]]
+                <div class="flex min-width"></div>
+                <div class="layout vertical pricing">
+                    <template is="dom-if" if="{{_totalFareWithOutDiscount}}">
+                        <span class="font-12 secondary-text discount">{{_getDisplayFare(_totalFareWithOutDiscount)}}</span>
+                    </template>
+                    <div class="layout horizontal center center-justified">
+                        <span class="font-12 secondary-text">USD</span>
+                        <span class="font-16 primary-text">{{_getDisplayFare(_totalFare)}}</span>
+                    </div>
+                    <div class="font-12 secondary-text">{{_getDisplayNightsCount(room.stayDuration.start, room.stayDuration.end)}}</div>
+                </div>
+            </div>
+            <div class="layout horizontal end">
+                <div class="link-style font-12" on-click="_showPolicy">Policy</div>
+                <div class="flex"></div>
+                <t-button label="Book" class="primary" on-click="_bookRoom"></t-button>
+            </div>
+        </t-text-container>
+    </template>
+</dom-module>
+<script>
+Polymer({
+
+    is: 't-hotel-room-item',
+
+    properties: {
+        room: {
+            type: Object,
+            value: function(){
+                return {};
+            }
+        }
+    },
+
+    observers: [ '_fareComponentsChanged(room.fare.components)' ],
+
+    behaviors: [TravelNxt.Behaviors.ProviderBehavior],
+
+    _fareComponentsChanged: function(components){        
+        this._components = components;
+    },
+
+    _getDisplayNightsCount: function(fromDate, toDate) {
+        var count = this._dateDiff(fromDate, toDate);
+        if (count > 1) {
+            return "for " + count + " nights";
+        } else {
+            return "for " + count + " night";
+        }
+    },
+
+    _dateDiff:function(fromDate, toDate) {        
+      var diff = toDate - fromDate; 
+      var divideBy = (24 * 60 * 60 * 1000) ; 
+      
+      return Math.floor( diff/divideBy);
+    },
+
+    _getDisplayFare: function(fare){
+        if(fare && fare.money){
+            return parseInt(fare.money.amount);
+        }
+        return null;
+    },
+
+    _bookRoom: function(){
+        this.fire('room-select', this.room);
+    },
+
+    _showPolicy: function(){
+        this.fire('room-policy', this.room)
+    }
+});
+</script>
