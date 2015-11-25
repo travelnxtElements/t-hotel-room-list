@@ -34,9 +34,8 @@
 	_policyProvider.authToken = 'testtoken';
 	_policyProvider.$.ajaxCall.method = 'GET';
 
-	var onRoomSelect = function(event){
-		debugger;
-		alert(event);
+	var onRoomSelect = function(event){		
+		alert('room select event fired - ' + event.detail.name);
 	};
 
 	document.querySelector('t-hotel-room-list').addEventListener('room-select', onRoomSelect);
