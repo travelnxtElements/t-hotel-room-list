@@ -13,7 +13,7 @@
     </template>  
     <t-hotel-room-policy-list>
     	<content select="#policyProvider"></content>     
-    </t-hotel-room-policy-list>
+    </t-hotel-room-policy-list>    
     <iron-list items="{{rooms}}" style="height:1000px">        
 		<template>
 			<t-hotel-room-item room="[[item]]">
@@ -44,9 +44,12 @@
 		
 
 		attached: function(){
-			this._checkAndSubscribeProvider();		
+			this._checkAndSubscribeProvider();					
+		},
+
+		showRooms: function(){
 			this._roomProvider.singleAvail();	
-			this._roomsLoading = true;		
+			this._roomsLoading = true;
 		},
 
 		/**
