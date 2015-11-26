@@ -29,7 +29,9 @@
 		is: "t-hotel-room-list",
 
 		properties: {
-			rooms: Array
+			rooms: Array,
+
+			auto: Boolean
 		},
 
 		_roomProvider: null,    
@@ -44,10 +46,13 @@
 		
 
 		attached: function(){
-			this._checkAndSubscribeProvider();					
+			if(this.auto){
+				this.showRooms();
+			}
 		},
 
 		showRooms: function(){
+			this._checkAndSubscribeProvider();	
 			this._roomProvider.singleAvail();	
 			this._roomsLoading = true;
 		},
