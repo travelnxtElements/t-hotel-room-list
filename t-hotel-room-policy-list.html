@@ -9,7 +9,7 @@
             Sorry we are having difficulties fetching policies of your selected room. Please select another.
         </template>
         <template is="dom-if" if="{{policies}}">
-            <template is="dom-repeat" items="{{_policyProvider.ajaxCall.lastResponse.rules}}">
+            <template is="dom-repeat" items="{{policies}}">
                 <h3>[[item.type]]</h3>
                 <p>[[item.description]]</p>
             </template>             
@@ -43,11 +43,13 @@
         _checkAndSubscribeProvider: function(){    
             this.set('_policyProvider', Polymer.dom(this).queryDistributedElements('#policyProvider')[0]);
             if(!this._policyProvider){
-                console.error('no room list provider resolved with id #policyProvider');
+                console.log('no room list provider resolved with id #policyProvider');
+                return;
             }
-            if(typeof this._policyProvider.getPolicies != 'function'){
-                console.error('no "getPolicies" function is present in given policy provider');
+            if(this._policyProvider.getPolicies && typeof this._policyProvider.getPolicies != 'function'){
+                console.log('no "getPolicies" function is present in given policy provider');
             }
+            
             this._policyProvider.addEventListener('room-policy-success', this._successCallback.bind(this));
             this._policyProvider.addEventListener('room-policy-error', this._errorCallback.bind(this));
         },
