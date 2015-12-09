@@ -52,10 +52,12 @@
                 </div>
                 <div class="flex min-width"></div>
                 <div class="layout vertical pricing">
+                    <div class="font-12 secondary-text">
+                        <span>USD</span>
                     <template is="dom-if" if="{{_discount.money.amount}}">
-                        <span class="font-12 secondary-text discount">{{_getDisplayFare(_totalFareWithOutDiscount)}}</span>
+                        <span class="discount">{{_getDisplayFare(_totalFareWithOutDiscount)}}</span>
                     </template>
-                    <span class="font-12 secondary-text">USD</span>
+                    </div>
                     <span class="font-16 primary-text">{{_getDisplayFare(_totalFare)}}</span>
                     <div class="font-12 secondary-text">{{_getDisplayNightsCount(room.stayDuration.start, room.stayDuration.end)}}</div>
                 </div>
