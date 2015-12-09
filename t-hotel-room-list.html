@@ -26,7 +26,7 @@
 	    </t-hotel-room-policy-list>    
 	    <iron-list items="{{rooms}}">        
 			<template>
-				<t-hotel-room-item room="[[item]]">
+				<t-hotel-room-item room="[[item]]" itinerary="[[itinerary]]">
 				</t-hotel-room-item>
 			</template>
 	    </iron-list> 
@@ -42,7 +42,9 @@
 		properties: {
 			rooms: Array,
 
-			auto: Boolean
+			auto: Boolean,
+
+			itinerary: Object
 		},
 
 		_roomProvider: null,    

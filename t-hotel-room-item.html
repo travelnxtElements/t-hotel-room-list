@@ -59,7 +59,7 @@
                     </template>
                     </div>
                     <span class="font-16 primary-text">{{_getDisplayFare(_totalFare)}}</span>
-                    <div class="font-12 secondary-text">{{_getDisplayNightsCount(room.stayDuration.start, room.stayDuration.end)}}</div>
+                    <div class="font-12 secondary-text">{{_getDisplayNightsCount(itinerary.stayDuration.start.date, itinerary.stayDuration.end.date)}}</div>
                 </div>
             </div>
             <div class="layout horizontal end">
@@ -81,7 +81,9 @@ Polymer({
             value: function(){
                 return {};
             }
-        }
+        },
+
+        itinerary: Object
     },
 
     observers: [ '_fareComponentsChanged(room.fare.components)' ],
@@ -93,6 +95,9 @@ Polymer({
     },
 
     _getDisplayNightsCount: function(fromDate, toDate) {
+        if(!fromDate || !toDate)
+            return '';
+
         var count = this._dateDiff(fromDate, toDate);
         if (count > 1) {
             return "for " + count + " nights";
@@ -101,9 +106,14 @@ Polymer({
         }
     },
 
-    _dateDiff:function(fromDate, toDate) {        
-      var diff = toDate - fromDate; 
-      var divideBy = (24 * 60 * 60 * 1000) ; 
+    _dateDiff:function(fromDate, toDate) {   
+        if(typeof fromDate == 'string')     
+            fromDate = new Date(fromDate);
+        if(typeof toDate == 'string')     
+            toDate = new Date(toDate);
+
+        var diff = toDate - fromDate; 
+        var divideBy = (24 * 60 * 60 * 1000) ; 
       
       return Math.floor( diff/divideBy);
     },
