@@ -52,7 +52,7 @@
                 </div>
                 <div class="flex min-width"></div>
                 <div class="layout vertical pricing">
-                    <template is="dom-if" if="{{_totalFareWithOutDiscount}}">
+                    <template is="dom-if" if="{{_discount.money.amount}}">
                         <span class="font-12 secondary-text discount">{{_getDisplayFare(_totalFareWithOutDiscount)}}</span>
                     </template>
                     <span class="font-12 secondary-text">USD</span>
@@ -84,7 +84,7 @@ Polymer({
 
     observers: [ '_fareComponentsChanged(room.fare.components)' ],
 
-    behaviors: [TravelNxt.Behaviors.ProviderBehavior],
+    behaviors: [TravelNxt.Behaviors.FareBehavior],
 
     _fareComponentsChanged: function(components){        
         this._components = components;
