@@ -19,6 +19,7 @@
         }
         .pricing{
             text-align: right;
+            min-width: 75px;
         }
         .min-width{
             min-width: 10px;
@@ -45,22 +46,22 @@
         </template>        
         <t-text-container>
             <div class="layout horizontal start first-section">
-                <div class="roomDetails font-16 primary-text">[[room.name]]</div>
-                [[room.description]]
+                <div class="layout vertical">
+                    <div class="font-16 primary-text">[[room.name]]</div>
+                    <div class="font-12 secondary-text">[[room.description]]</div>
+                </div>
                 <div class="flex min-width"></div>
                 <div class="layout vertical pricing">
                     <template is="dom-if" if="{{_totalFareWithOutDiscount}}">
                         <span class="font-12 secondary-text discount">{{_getDisplayFare(_totalFareWithOutDiscount)}}</span>
                     </template>
-                    <div class="layout horizontal center center-justified">
-                        <span class="font-12 secondary-text">USD</span>
-                        <span class="font-16 primary-text">{{_getDisplayFare(_totalFare)}}</span>
-                    </div>
+                    <span class="font-12 secondary-text">USD</span>
+                    <span class="font-16 primary-text">{{_getDisplayFare(_totalFare)}}</span>
                     <div class="font-12 secondary-text">{{_getDisplayNightsCount(room.stayDuration.start, room.stayDuration.end)}}</div>
                 </div>
             </div>
             <div class="layout horizontal end">
-                <div class="link-style font-12" on-click="_showPolicy">Policy</div>
+                <div class="link-style font-12" on-click="_showPolicy">policy</div>
                 <div class="flex"></div>
                 <t-button label="Book" class="primary" on-click="_bookRoom"></t-button>
             </div>
