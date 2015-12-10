@@ -5,7 +5,7 @@
         <t-text-container>            
             <template is="dom-if" if="{{_policyLoading}}">
                 <div class="section font-16 text-center">
-                    Please wait, we fetch policies for your selected itinerary.
+                    Please wait, we are fetching policies for your selected itinerary.
                 </div>
                 <div class="horizontal layout flex center-justified">
                     <t-loader active></t-loader>
@@ -32,13 +32,14 @@
 
         properties: {
             policies: Array
+
         },
+            _policyProvider: null,
 
-        _policyProvider: null,
+            _policyLoading: false,
 
-        _policyLoading: false,
+            _policyFailed: false,
 
-        _policyFailed: false,
 
         attached: function(){
             this._checkAndSubscribeProvider();      
@@ -46,6 +47,8 @@
 
         showPolicies: function(){
             this._policyLoading = true;
+            this.policies = null;
+            this._policyFailed = false;
             this._policyProvider.getPolicies();
         },
 
