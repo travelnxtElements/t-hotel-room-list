@@ -1,5 +1,6 @@
 <link rel="import" href="../polymer/polymer.html" />
 <link rel="import" href="../iron-list/iron-list.html" />
+<link rel="import" href="../t-overlay/t-overlay.html" />
 <link rel="import" href="../t-text-container/t-text-container.html">
 <link rel="import" href="t-hotel-room-item.html" />
 <link rel="import" href="t-hotel-room-policy-list.html" />
@@ -20,10 +21,12 @@
 	    </template>
 	    <template is="dom-if" if="{{_roomsFailed}}">
 	    	<t-notify active message="Sorry we are having difficulties confirming the availability of your selected itinerary. Please go back and select another."></t-notify>
-	    </template>  
-	    <t-hotel-room-policy-list>
-	    	<content select="#policyProvider"></content>     
-	    </t-hotel-room-policy-list>    
+	    </template>
+	    <t-overlay header="Policies" id="overlay">  
+		    <t-hotel-room-policy-list>
+		    	<content select="#policyProvider"></content>     
+		    </t-hotel-room-policy-list>    
+	    </t-overlay>
 	    <iron-list items="{{rooms}}">        
 			<template>
 				<t-hotel-room-item room="[[item]]" itinerary="[[itinerary]]">
@@ -95,7 +98,8 @@
 	    	this._roomsFailed = true
 	    },
 
-	    _showRoomPolicy: function(event){	    
+	    _showRoomPolicy: function(event){
+	    	this.$.overlay.active = true;	    
 	    	Polymer.dom(this.root).querySelector('t-hotel-room-policy-list').querySelector('#policyProvider').inventoryId = event.detail.id;	    	
 	    	Polymer.dom(this.root).querySelector('t-hotel-room-policy-list').showPolicies();	    	
 	    },

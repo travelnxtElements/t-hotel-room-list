@@ -1,20 +1,29 @@
 <link rel="import" href="../polymer/polymer.html">
 
 <dom-module id="t-hotel-room-policy-list">    
-    <template>            
-        <template is="dom-if" if="{{_policyLoading}}">
-            Please wait, we fetch policies for your selected itinerary.           
-        </template>
-        <template is="dom-if" if="{{_policyFailed}}">
-            Sorry we are having difficulties fetching policies of your selected room. Please select another.
-        </template>
-        <template is="dom-if" if="{{policies}}">
-            <template is="dom-repeat" items="{{policies}}">
-                <h3>[[item.type]]</h3>
-                <p>[[item.description]]</p>
-            </template>             
-        </template>    
-        <content select="#policyProvider"></content>             
+    <template>
+        <t-text-container>            
+            <template is="dom-if" if="{{_policyLoading}}">
+                <div class="section font-16 text-center">
+                    Please wait, we fetch policies for your selected itinerary.
+                </div>
+                <div class="horizontal layout flex center-justified">
+                    <t-loader active></t-loader>
+                </div>           
+            </template>
+            <template is="dom-if" if="{{_policyFailed}}">
+                <t-notify active message="Sorry we are having difficulties fetching policies of your selected room. Please select another."></t-notify>
+            </template>
+            <template is="dom-if" if="{{policies}}">
+                    <div class="section">
+                        <template is="dom-repeat" items="{{policies}}">
+                            <div class="font-16 border-bottom margin-bottom">[[item.type]]</div>
+                            <div class="font-12 margin-bottom">[[item.description]]</div>
+                        </template>             
+                    </div>
+            </template>    
+        </t-text-container>             
+        <content select="#policyProvider"></content>
     </template>
 </dom-module>
 <script>
