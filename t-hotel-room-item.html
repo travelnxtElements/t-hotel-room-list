@@ -46,9 +46,9 @@
         </template>        
         <t-text-container>
             <div class="layout horizontal start first-section">
-                <div class="layout vertical">
-                    <div class="font-16 primary-text">[[room.name]]</div>
-                    <div class="font-12 secondary-text">[[room.description]]</div>
+                <div class="layout vertical capitalize">
+                    <div class="font-16 primary-text">{{_toLowerCase(room.name)}}</div>
+                    <div class="font-12 secondary-text">{{_toLowerCase(room.description)}}</div>
                 </div>
                 <div class="flex min-width"></div>
                 <div class="layout vertical pricing">
@@ -89,6 +89,11 @@ Polymer({
     observers: [ '_fareComponentsChanged(room.fare.components)' ],
 
     behaviors: [TravelNxt.Behaviors.FareBehavior],
+
+    _toLowerCase:function(text){
+        text = text || '';
+        return text.toLowerCase();
+    },
 
     _fareComponentsChanged: function(components){        
         this._components = components;
