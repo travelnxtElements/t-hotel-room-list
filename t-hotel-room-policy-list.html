@@ -14,18 +14,14 @@
             <template is="dom-if" if="{{_policyFailed}}">
                 <t-notify active message="Sorry we are having difficulties fetching policies of your selected room. Please select another."></t-notify>
             </template>
-            <template is="dom-repeat" items="{{policies}}">
-                    <div class="section">
-                        <div class="font-16 border-bottom margin-bottom">[[item.type]]</div>
-                        <ul>
-                            <template is="dom-repeat" items="{{item.rules}}" as="rule">                            
-                                <li>
-                                    <div class="font-12 margin-bottom">[[rule]]</div>
-                                </li>
-                            </template>             
-                        </ul>
-                    </div>
-            </template>    
+            <div class="section">
+                <template is="dom-repeat" items="{{policies}}">
+                    <div class="font-16 border-bottom margin-bottom">[[item.type]]</div>
+                    <template is="dom-repeat" items="{{item.rules}}" as="rule">
+                        <div class="font-12 margin-bottom">[[rule]]</div>
+                    </template>             
+                </template>    
+            </div>
         </t-text-container>             
         <content select="#policyProvider"></content>
     </template>
