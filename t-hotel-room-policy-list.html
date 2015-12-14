@@ -47,8 +47,8 @@
 
         showPolicies: function(){
             this._policyLoading = true;
-            this.policies = null;
             this._policyFailed = false;
+            this.policies = null;
             this._policyProvider.getPolicies();
         },
 
@@ -68,12 +68,13 @@
 
         _successCallback: function(event){
             this._policyLoading = false;      
+            this._policyFailed = false;
             this.policies = event.detail;      
         },
 
         _errorCallback: function(event){
             this._policyLoading = false;
-            this._policyFailed = true
+            this._policyFailed = true;
             
         }
     }); 
