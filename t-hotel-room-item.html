@@ -20,6 +20,7 @@
         .pricing{
             text-align: right;
             min-width: 75px;
+            line-height: 1.1;
         }
         .min-width{
             min-width: 10px;
@@ -48,7 +49,7 @@
             <div class="layout horizontal start first-section">
                 <div class="layout vertical capitalize">
                     <div class="font-16 primary-text">{{_toLowerCase(room.name)}}</div>
-                    <div class="font-12 secondary-text">{{_toLowerCase(room.description)}}</div>
+                    <div class="font-12 secondary-text ellipsis-2">{{_toLowerCase(room.description)}}</div>
                 </div>
                 <div class="flex min-width"></div>
                 <div class="layout vertical pricing">
