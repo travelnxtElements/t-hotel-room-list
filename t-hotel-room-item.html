@@ -148,13 +148,23 @@ Polymer({
         deals.sort(function(a,b){
             var aIndex = types.indexOf(a.type.toLowerCase());
             var bIndex = types.indexOf(b.type.toLowerCase());
+            //set rank for random deal type higher than opaquedeal
             if(aIndex == -1){
                 aIndex = types.indexOf('placeholderforanytype'); 
             }
             if(bIndex == -1){
                 bIndex = types.indexOf('placeholderforanytype');
             }
-            return types.indexOf(b.type.toLowerCase()) - types.indexOf(a.type.toLowerCase())
+
+            //set lesser rank if deal name is missing
+            if(!b.name){
+                bIndex = aIndex-1;
+            }
+            if(!a.name){
+                aIndex = bIndex-1;
+            }            
+            
+            return bIndex - aIndex
         });
         
         return [ deals[0] ];
