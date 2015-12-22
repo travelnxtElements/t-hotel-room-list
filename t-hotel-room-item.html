@@ -42,7 +42,12 @@
     <template>            
         <template is="dom-repeat" items="{{_getPreferredDeal(room.deals)}}">
             <div class="layout horizontal">
-                <t-badge label="{{item.name}}"></t-badge>
+                <template is="dom-if" if="{{item.name}}">
+                    <t-badge label="{{item.name}}"></t-badge>
+                </template>
+                <template is="dom-if" if="{{!item.name}}">
+                    <t-badge label="Deal"></t-badge>
+                </template>
             </div>            
         </template>        
         <t-text-container>
@@ -167,7 +172,7 @@ Polymer({
             return bIndex - aIndex
         });
         
-        return [ deals[0] ];
+        return [ deals[0] ];        
     }
 });
 </script>
