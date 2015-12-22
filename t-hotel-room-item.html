@@ -40,7 +40,7 @@
         }
     </style>
     <template>            
-        <template is="dom-repeat" items="{{room.deals}}">
+        <template is="dom-repeat" items="{{_getPreferredDeal(room.deals)}}">
             <div class="layout horizontal">
                 <t-badge label="{{item.name}}"></t-badge>
             </div>            
@@ -137,6 +137,27 @@ Polymer({
 
     _showPolicy: function(){
         this.fire('room-policy', this.room)
+    },
+
+    _getPreferredDeal: function(deals){        
+        if(!deals || !deals.length)
+            return;
+
+        var types = ['opaquedeal', 'placeholderforanytype', 'flatratedeal', 'percentagediscountdeal', 'discountdeal']; //low to high, placeholderforanytype is just to keep opaquedeal at low against any type
+        
+        deals.sort(function(a,b){
+            var aIndex = types.indexOf(a.type.toLowerCase());
+            var bIndex = types.indexOf(b.type.toLowerCase());
+            if(aIndex == -1){
+                aIndex = types.indexOf('placeholderforanytype'); 
+            }
+            if(bIndex == -1){
+                bIndex = types.indexOf('placeholderforanytype');
+            }
+            return types.indexOf(b.type.toLowerCase()) - types.indexOf(a.type.toLowerCase())
+        });
+        
+        return [ deals[0] ];
     }
 });
 </script>
