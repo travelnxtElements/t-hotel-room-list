@@ -89,6 +89,11 @@
 	    },
 
 	    _successCallback: function(event){
+	    	if(!event.detail || !event.detail.length){
+	    		this._errorCallback(event)
+	    		return;
+	    	}
+	    	
 	    	this.rooms = event.detail;
 	    	this._roomsLoading = false;
 	    },
