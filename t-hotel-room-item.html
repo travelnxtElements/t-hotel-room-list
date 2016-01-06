@@ -81,7 +81,7 @@
             <div class="layout horizontal end">
                 <div class="layout vertical font-12 flex button-section">
                     <template is="dom-if" if="{{room.inclusions}}">
-                        <div class="secondary-text ellipsis">Includes: [[_getRoomInclusion(room.inclusions)]]</div>
+                        <div class="secondary-text ellipsis">Includes: <span class="primary-text">[[_getRoomInclusion(room.inclusions)]]</span></div>
                     </template>
                     <div class="link-style" on-click="_showPolicy">policy</div>
                 </div>
