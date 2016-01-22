@@ -1,7 +1,9 @@
 <link rel="import" href="../polymer/polymer.html" />
 <link rel="import" href="../iron-ajax/iron-ajax.html">
 <link rel="import" href="../t-shared-lib/t-provider-behavior.html" />
-
+<!--
+    `<t-hotel-room-list-provider>` is a polymer component that makes the call to fetch all room types for selected hotel.
+-->
 <dom-module id="t-hotel-room-list-provider">
     <template>
         <iron-ajax id="ajaxCall" 
@@ -18,6 +20,7 @@ Polymer({
     is: 't-hotel-room-list-provider',
 
     properties: {
+
         /**
          * Search results id returned in listing response
          */
@@ -28,11 +31,17 @@ Polymer({
          */
         inventoryId: String,
 
+        /**
+         * This is by default set to true and cannot be set to false
+         */
         fetchAllAvailableRooms: {
             type: Boolean,
             value: true
         },
 
+        /**
+         * The ajax request object
+         */
         ajaxCall: {
             type: Object,
             notify: true,

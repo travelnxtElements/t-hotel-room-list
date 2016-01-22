@@ -1,18 +1,27 @@
 <link rel="import" href="../polymer/polymer.html" />
 <link rel="import" href="../iron-list/iron-list.html" />
 <link rel="import" href="../t-overlay/t-overlay.html" />
-<link rel="import" href="../t-text-container/t-text-container.html">
+<link rel="import" href="../t-text-container/travel-element-styles.html" />
 <link rel="import" href="t-hotel-room-item.html" />
 <link rel="import" href="t-hotel-room-policy-list.html" />
+<!--
+    `<t-hotel-room-list>` is a polymer component that generates a list of t-hotel-room-item in Details page of the app.
 
+    Basic usage
+    `
+    <t-hotel-room-list itinerary="{{selectedHotel}}">    
+        <t-hotel-room-list-provider id="roomProvider">
+        </t-hotel-room-list-provider>
+        <t-hotel-room-policy-provider id="policyProvider">
+        </t-hotel-room-policy-provider>     
+    </t-hotel-room-list> 
+    `
+-->
 <dom-module id="t-hotel-room-list">
 <template>
-<style>
-	t-hotel-room-item{
-		 border-bottom: 1px solid var(--grey-two,#eeeeee);
-	}
-</style>
-	<t-text-container>
+    <style include="travel-element-styles">
+	</style>
+	<div>
 		<template is="dom-if" if="{{_roomsLoading}}">
 	        <div class="section font-16 text-center">Please wait, we are getting available rooms and rates for your selected itinerary.</div>
 	        <div class="horizontal layout flex center-justified">
@@ -29,12 +38,12 @@
 	    </t-overlay>
 	    <iron-list items="{{rooms}}">        
 			<template>
-				<t-hotel-room-item room="[[item]]" itinerary="[[itinerary]]">
+				<t-hotel-room-item room="[[item]]" itinerary="[[itinerary]]" class="border-bottom">
 				</t-hotel-room-item>
 			</template>
 	    </iron-list> 
 	    <content select="#roomProvider" ></content>
-	</t-text-container>               
+	</div>               
 </template>
 </dom-module>
 
@@ -43,10 +52,20 @@
 		is: "t-hotel-room-list",
 
 		properties: {
+
+			/**
+		     * Provide the array of all room type objects.
+		     */ 
 			rooms: Array,
 
+			/**
+		     * Set to true to automatically make a call for room types/ run the method for showRooms.
+		     */ 
 			auto: Boolean,
 
+			/**
+		     * Provide the Hotel details object. Ideally the One provided by the Mystique api.
+		     */ 
 			itinerary: Object
 		},
 
@@ -67,6 +86,9 @@
 			}
 		},
 
+		/**
+	     * make a call for room types and populate data in the list.
+	     */  
 		showRooms: function(){
 			this._checkAndSubscribeProvider();	
 			this._roomProvider.singleAvail();	

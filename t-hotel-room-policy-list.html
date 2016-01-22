@@ -1,28 +1,41 @@
 <link rel="import" href="../polymer/polymer.html">
+<link rel="import" href="../t-text-container/travel-element-styles.html" />
+<!--
+    `<t-hotel-room-list>` is a polymer component that generates a list of t-hotel-room-item in Details page of the app.
 
+    Basic usage
+    `
+    <t-hotel-room-list itinerary="{{selectedHotel}}">    
+        <t-hotel-room-list-provider id="roomProvider">
+        </t-hotel-room-list-provider>
+        <t-hotel-room-policy-provider id="policyProvider">
+        </t-hotel-room-policy-provider>     
+    </t-hotel-room-list> 
+    `
+-->
 <dom-module id="t-hotel-room-policy-list">    
     <template>
-        <t-text-container>            
-            <template is="dom-if" if="{{_policyLoading}}">
-                <div class="section font-16 text-center">
-                    Please wait, we are fetching policies for your selected itinerary.
-                </div>
-                <div class="horizontal layout flex center-justified">
-                    <t-loader active></t-loader>
-                </div>           
-            </template>
-            <template is="dom-if" if="{{_policyFailed}}">
-                <t-notify active message="Sorry we are having difficulties fetching policies of your selected room. Please select another."></t-notify>
-            </template>
-            <div class="section">
-                <template is="dom-repeat" items="{{policies}}">
-                    <div class="font-16 border-bottom margin-bottom">[[item.type]]</div>
-                    <template is="dom-repeat" items="{{item.rules}}" as="rule">
-                        <div class="font-12 margin-bottom">[[rule]]</div>
-                    </template>             
-                </template>    
+    <style include="travel-element-styles">
+    </style>
+        <template is="dom-if" if="{{_policyLoading}}">
+            <div class="section font-16 text-center">
+                Please wait, we are fetching policies for your selected itinerary.
             </div>
-        </t-text-container>             
+            <div class="horizontal layout flex center-justified">
+                <t-loader active></t-loader>
+            </div>           
+        </template>
+        <template is="dom-if" if="{{_policyFailed}}">
+            <t-notify active message="Sorry we are having difficulties fetching policies of your selected room. Please select another."></t-notify>
+        </template>
+        <div class="section">
+            <template is="dom-repeat" items="{{policies}}">
+                <div class="font-16 border-bottom margin-bottom">[[item.type]]</div>
+                <template is="dom-repeat" items="{{item.rules}}" as="rule">
+                    <div class="font-12 margin-bottom">[[rule]]</div>
+                </template>             
+            </template>    
+        </div>
         <content select="#policyProvider"></content>
     </template>
 </dom-module>
@@ -31,6 +44,10 @@
         is: "t-hotel-room-policy-list",
 
         properties: {
+
+            /**
+             * Provide the array of all policy objects where each object will also include the policy type.
+             */ 
             policies: Array
 
         },
@@ -45,6 +62,9 @@
             this._checkAndSubscribeProvider();      
         },
 
+        /**
+         * This method will initiate the call to get policies for selected room.
+         */ 
         showPolicies: function(){
             this._policyLoading = true;
             this._policyFailed = false;

@@ -1,6 +1,9 @@
 <link rel="import" href="../polymer/polymer.html" />
 <link rel="import" href="../iron-ajax/iron-ajax.html">
 <link rel="import" href="../t-shared-lib/t-provider-behavior.html" />
+<!--
+    `<t-hotel-room-policy-provider>` is a polymer component that makes the call to fetch all policies for selected room.
+-->
 
 <dom-module id="t-hotel-room-policy-provider">
     <template>
@@ -18,6 +21,7 @@ Polymer({
     is: 't-hotel-room-policy-provider',
 
     properties: {
+        
         /**
          * Search results id returned in listing response
          */
@@ -28,6 +32,9 @@ Polymer({
          */
         inventoryId: String,
 
+        /**
+         * The ajax request object
+         */
         ajaxCall: {
             type: Object,
             notify: true,

@@ -2,52 +2,54 @@
 <link rel="import" href="../iron-flex-layout/classes/iron-flex-layout.html">
 <link rel="import" href="../t-button/t-button.html" />
 <link rel="import" href="../t-badge/t-badge.html" />
-<link rel="import" href="../t-text-container/t-text-container.html">
-<link rel="import" href="../t-shared-lib/t-fare-behavior.html">
+<link rel="import" href="../t-text-container/travel-element-styles.html" />
+<link rel="import" href="../t-shared-lib/t-fare-behavior.html" />
+<!--
+    `<t-hotel-room-item>` is a polymer component that generates a hotel-room- type in Details page of the app.
+
+    Basic usage
+    `<t-hotel-room-item room="[[item]]" itinerary="[[itinerary]]">
+    </t-hotel-room-item>`
+-->
 <dom-module id="t-hotel-room-item">
-    <style>
-    :host {
-        display: block;
-    }
-    
-    .discount {
-        text-decoration: line-through;
-    }
-    
-    t-badge {
-        margin-top: 10px;
-    }
-    
-    .pricing {
-        text-align: right;
-        min-width: 75px;
-        line-height: 1.1;
-    }
-    
-    .min-width {
-        min-width: 10px;
-    }
-    
-    .first-section {
-        margin-bottom: 10px;
-    }
-    
-    t-text-container {
-        padding: 10px;
-        display: block;
-    }
-    
-    t-button {
-        font-size: 14px;
-    }
-    
-    t-button::content paper-button {
-        padding: 5px 10px;
-    }
-    
-    .button-section {
-        line-height: 1.3;
-    }
+    <style include="travel-element-styles">
+        :host {
+            display: block;
+        }
+        
+        .discount {
+            text-decoration: line-through;
+        }
+        
+        t-badge {
+            margin-top: 10px;
+        }
+        
+        .pricing {
+            text-align: right;
+            min-width: 75px;
+            line-height: 1.1;
+        }
+        
+        .min-width {
+            min-width: 10px;
+        }
+        
+        .first-section {
+            margin-bottom: 10px;
+        }
+        
+        t-button {
+            font-size: 14px;
+        }
+        
+        t-button::content paper-button {
+            padding: 5px 10px;
+        }
+        
+        .button-section {
+            line-height: 1.3;
+        }
     </style>
     <template>
         <template is="dom-repeat" items="{{_getPreferredDeal(room.deals)}}">
@@ -60,7 +62,7 @@
                 </template>
             </div>
         </template>
-        <t-text-container>
+        <div class="section-small">
             <div class="layout horizontal start first-section">
                 <div class="layout vertical capitalize">
                     <div class="font-16 primary-text ellipsis-2">{{_toLowerCase(room.name)}}</div>
@@ -88,7 +90,7 @@
                 <div class="min-width"></div>
                 <t-button label="Book" class="primary" on-click="_bookRoom"></t-button>
             </div>
-        </t-text-container>
+        </div>
     </template>
 </dom-module>
 <script>
@@ -97,6 +99,8 @@ Polymer({
     is: 't-hotel-room-item',
 
     properties: {
+
+        /*Pass the Room object with data of different rooms available in Hotel. Component is designed as the object mystique API provides for different rooms available in Hotel.*/
         room: {
             type: Object,
             value: function() {
@@ -104,6 +108,7 @@ Polymer({
             }
         },
 
+        /*Pass the itinerary object with data of Journey. Component is designed as the object mystique API provides for the current Journey.*/
         itinerary: Object
     },
 
