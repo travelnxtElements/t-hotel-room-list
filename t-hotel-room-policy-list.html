@@ -1,5 +1,6 @@
 <link rel="import" href="../polymer/polymer.html">
 <link rel="import" href="../t-text-container/travel-element-styles.html" />
+<link rel="import" href="../juicy-html/juicy-html.html">
 <!--
     `<t-hotel-room-list>` is a polymer component that generates a list of t-hotel-room-item in Details page of the app.
 
@@ -32,7 +33,9 @@
             <template is="dom-repeat" items="{{policies}}">
                 <div class="font-16 border-bottom margin-bottom">[[item.type]]</div>
                 <template is="dom-repeat" items="{{item.rules}}" as="rule">
-                    <div class="font-12 margin-bottom">[[rule]]</div>
+                    <div class="font-12 margin-bottom">
+                        <template is="juicy-html" content$="[[rule]]" ></template>                        
+                    </div>
                 </template>             
             </template>    
         </div>

@@ -35,7 +35,8 @@
     "t-badge": "travelnxtElements/t-badge#0.0.0", 
     "t-text-container": "travelnxtElements/t-text-container#0.0.0", 
     "t-shared-lib": "travelnxtElements/t-shared-lib#master",
-    "polymer": "Polymer/polymer#^1.0.0"
+    "polymer": "Polymer/polymer#^1.0.0",
+    "juicy-html": "Juicy/juicy-html#1f337518eaf6cfea7add475af3a9cf467dda6f39"
   },
   "devDependencies": {
     "webcomponentsjs": "~0.7.14",
