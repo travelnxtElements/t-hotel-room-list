@@ -120,7 +120,19 @@ Polymer({
                         break;
                     }
                     default:{
-                        generalRules.push(rules[i].description);
+                        var isPresent = false;
+                        generalRules.forEach(function(itemRule){
+                            if(itemRule && rules[i].description){
+                                var str1 = itemRule.toLowerCase().replace(/ /g,'').replace('’', "'");
+                                var str2 = rules[i].description.toLowerCase().replace(/ /g,'').replace('’', "'");;
+                                if(str1 == str2){
+                                    isPresent = true;
+                                }
+                            }
+                        })
+                        if(!isPresent){
+                            generalRules.push(rules[i].description);
+                        }
                         break;
                     }
                 }
