@@ -31,13 +31,15 @@
         </template>
         <div class="section">
             <template is="dom-repeat" items="{{policies}}">
-                <div class="font-16 border-bottom margin-bottom">[[item.type]]</div>
-                <template is="dom-repeat" items="{{item.rules}}" as="rule">
-                    <div class="font-12 margin-bottom">
-                        <template is="juicy-html" content$="[[rule]]" ></template>                        
-                    </div>
-                </template>             
-            </template>    
+                <template is="dom-if" if="[[item.rules.length]]">
+                    <div class="font-16 border-bottom margin-bottom">[[item.type]]</div>
+                    <template is="dom-repeat" items="{{item.rules}}" as="rule">
+                        <div class="font-12 margin-bottom">
+                            <template is="juicy-html" content$="[[rule]]" ></template>                        
+                        </div>
+                    </template>             
+                </template>    
+            </template>
         </div>
         <content select="#policyProvider"></content>
     </template>
