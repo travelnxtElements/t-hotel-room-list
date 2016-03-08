@@ -4,6 +4,7 @@
 <link rel="import" href="../t-badge/t-badge.html" />
 <link rel="import" href="../t-text-container/travel-element-styles.html" />
 <link rel="import" href="../t-shared-lib/t-fare-behavior.html" />
+<link rel="import" href="../juicy-html/juicy-html.html">
 <!--
     `<t-hotel-room-item>` is a polymer component that generates a hotel-room- type in Details page of the app.
 
@@ -67,7 +68,9 @@
             <div class="layout horizontal start first-section">
                 <div class="layout vertical capitalize">
                     <div class="font-16 primary-text ellipsis-2">{{_toLowerCase(room.name)}}</div>
-                    <div class="font-12 secondary-text ellipsis-2">{{_toLowerCase(room.description)}}</div>
+                    <div class="font-12 secondary-text ellipsis-2">                        
+                        <template is="juicy-html" content$="{{_toLowerCase(room.description)}}" ></template> 
+                    </div>
                 </div>
                 <div class="flex min-width"></div>
                 <div class="layout vertical pricing">
