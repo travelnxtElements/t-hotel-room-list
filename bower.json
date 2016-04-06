@@ -1,6 +1,6 @@
 {
   "name": "t-hotel-room-list",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "authors": [
     "Rahul Pilkhwal <rahul.pilkhwal@tavisca.com>",
     "Shailesh Kumar Srivastava <ssrivastava@tavisca.com>",
@@ -28,12 +28,12 @@
     "iron-ajax": "PolymerElements/iron-ajax#1.0.0",
     "iron-list": "PolymerElements/iron-list#^1.0.0",
     "iron-flex-layout": "PolymerElements/iron-flex-layout#^1.0.0",
-    "t-button": "atomelements/t-button#0.0.0", 
-    "t-notify": "atomelements/t-notify#0.0.0", 
+    "t-button": "atomelements/t-button#0.0.0",
+    "t-notify": "atomelements/t-notify#0.0.0",
     "t-loader": "atomelements/t-loader#0.0.0",
-    "t-overlay": "atomelements/t-overlay#0.0.0", 
-    "t-badge": "travelnxtElements/t-badge#0.0.0", 
-    "t-text-container": "travelnxtElements/t-text-container#0.0.0", 
+    "t-overlay": "atomelements/t-overlay#0.0.0",
+    "t-badge": "travelnxtElements/t-badge#0.0.0",
+    "t-text-container": "travelnxtElements/t-text-container#0.0.0",
     "t-shared-lib": "travelnxtElements/t-shared-lib#master",
     "polymer": "Polymer/polymer#^1.0.0",
     "juicy-html": "Juicy/juicy-html#1f337518eaf6cfea7add475af3a9cf467dda6f39"
