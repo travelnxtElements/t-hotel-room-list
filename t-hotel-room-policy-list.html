@@ -1,6 +1,7 @@
 <link rel="import" href="../polymer/polymer.html">
 <link rel="import" href="../t-text-container/travel-element-styles.html" />
 <link rel="import" href="../juicy-html/juicy-html.html">
+<link rel="import" href="../iron-flex-layout/iron-flex-layout-classes.html" />
 <!--
     `<t-hotel-room-list>` is a polymer component that generates a list of t-hotel-room-item in Details page of the app.
 
@@ -16,6 +17,7 @@
 -->
 <dom-module id="t-hotel-room-policy-list">    
     <template>
+    <style include="iron-flex"></style>
     <style include="travel-element-styles">
     </style>
         <template is="dom-if" if="{{_policyLoading}}">
