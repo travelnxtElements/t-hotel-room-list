@@ -161,7 +161,7 @@ Polymer({
 
     _getDisplayFare: function(fare) {
         if (fare && fare.money) {
-            return parseInt(fare.money.amount);
+            return Math.ceil(fare.money.amount);
         }
         return null;
     },
