@@ -78,11 +78,11 @@
                 <div class="layout vertical pricing">
                     <div class="font-12 secondary-text">
                         <span>{{_currency}}</span>
-                        <template is="dom-if" if="{{_discount.money.amount}}">
-                            <span class="discount">{{_getDisplayFare(_baseFareWithoutSavings)}}</span>
+                        <template is="dom-if" if="[[_isDiscountApplicable(_strikeOffPrice, _displayPrice)]]">
+                            <span class="discount">{{_getDisplayFare(_strikeOffPrice)}}</span>
                         </template>
                     </div>
-                    <span class="font-16 primary-text">{{_getDisplayFare(_baseFareWithDiscount)}}</span>
+                    <span class="font-16 primary-text">{{_getDisplayFare(_displayPrice)}}</span>
                     <div class="font-12 secondary-text">{{_getDisplayNightsCount(itinerary.stayDuration.start.date, itinerary.stayDuration.end.date)}}</div>
                 </div>
             </div>
@@ -164,6 +164,10 @@ Polymer({
             return parseInt(fare.money.amount);
         }
         return null;
+    },
+
+    _isDiscountApplicable: function (strikeOffPrice, displayPrice) {
+        return strikeOffPrice.money.amount > displayPrice.money.amount;
     },
 
     _bookRoom: function() {
