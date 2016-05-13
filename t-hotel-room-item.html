@@ -170,7 +170,8 @@ Polymer({
         return strikeOffPrice.money.amount > displayPrice.money.amount;
     },
 
-    _bookRoom: function() {
+    _bookRoom: function() {        
+        this.querySelector('t-button').disabled = true;
         this.fire('room-select', this.room);
     },
 
