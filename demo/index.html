@@ -12,6 +12,7 @@
   <link rel="import" href="../t-hotel-room-item.html" />
   <link rel="import" href="../t-hotel-room-list-provider.html" />
   <link rel="import" href="../t-hotel-room-policy-provider.html" />
+  <link rel="import" href="../t-hotel-details-tab.html" />
 </head>
 <body>
 	<t-hotel-room-list >	
@@ -20,6 +21,8 @@
 		<t-hotel-room-policy-provider id="policyProvider">
 		</t-hotel-room-policy-provider>		
     </t-hotel-room-list>    
+
+    <t-hotel-details-tab></t-hotel-details-tab>
 </body>
 <script type="text/javascript">
 	var _provider = Polymer.dom(document.querySelector('t-hotel-room-list')).querySelector('#roomProvider');
