@@ -55,10 +55,10 @@ Example:
                 </template>
                 <div class="border-bottom margin-bottom"></div>
             </template>
-            <template is="dom-if" if="{{pointOfInterest.length}}">
+            <template is="dom-if" if="{{pointsOfInterest.length}}">
                 <div class="margin-bottom font-semi font-14 primary-text">Points of interest</div>
                 <div class="layout horizontal wrap">
-                    <template is="dom-repeat" items="{{_pointOfInterest}}" as="poi">
+                    <template is="dom-repeat" items="{{_pointsOfInterest}}" as="poi">
                         <div class="margin-bottom list-item-half">[[poi]]</div>
                     </template>
                 </div>
@@ -90,8 +90,8 @@ Example:
                 observer: '_hideAmenities'
             },
 
-            /*Pass the pointOfInterest array*/
-            pointOfInterest: {
+            /*Pass the pointsOfInterest array*/
+            pointsOfInterest: {
                 type: Array,
                 value: [],
                 observer: '_hidePois'
@@ -108,9 +108,9 @@ Example:
         },
 
         _hidePois: function() {
-            this._pointOfInterest = this.pointsOfInterest;
+            this._pointsOfInterest = this.pointsOfInterest;
             if (this.pointsOfInterest && this.pointsOfInterest.length > 15) {
-                this._pointOfInterest = this.pointsOfInterest.slice(0, 10);
+                this._pointsOfInterest = this.pointsOfInterest.slice(0, 10);
                 this.showMorePointsOfInterest = true;
             }
         },
@@ -121,8 +121,8 @@ Example:
         },
 
         onShowPOI: function() {
-            this._pointsOfInterest = this.showMoreAmenities ? this.pointsOfInterest : this.pointsOfInterest.slice(0, 10);
-            this.showMoreAmenities = !this.showMoreAmenities;
+            this._pointsOfInterest = this.showMorePointsOfInterest ? this.pointsOfInterest : this.pointsOfInterest.slice(0, 10);
+            this.showMorePointsOfInterest = !this.showMorePointsOfInterest;
         }
     });
     </script>
