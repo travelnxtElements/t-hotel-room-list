@@ -40,6 +40,7 @@
   },
   "devDependencies": {
     "webcomponentsjs": "~0.7.14",
-    "iron-component-page": "PolymerElements/iron-component-page#~1.0.6"
+    "iron-component-page": "PolymerElements/iron-component-page#~1.0.6",
+    "t-shared-components": "atomelements/t-shared-components#^1.0.5"
   }
 }
