@@ -37,15 +37,13 @@
 			    	<content select="#policyProvider"></content>     
 			    </t-hotel-room-policy-list>    
 		    </t-overlay>
-		    <iron-list items="{{rooms}}">        
-				<template>
-					<t-hotel-room-item
-						room="[[item]]" 
-						stayDuration="[[stayDuration]]" 
-						class="border-bottom">
-					</t-hotel-room-item>
-				</template>
-		    </iron-list> 
+		    <template is="dom-repeat" items="{{rooms}}">
+				<t-hotel-room-item
+					room="[[item]]" 
+					stayDuration="[[stayDuration]]" 
+					class="border-bottom">
+				</t-hotel-room-item>
+			</template>
 		    <content select="#roomProvider" ></content>
 		</div>               
 	</template>

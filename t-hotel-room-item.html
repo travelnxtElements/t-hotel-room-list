@@ -130,7 +130,9 @@
                 behaviors: [TravelNxt.Behaviors.FareBehavior],
                 
                 _getRoomInclusion:function(arr){
-                    return arr.join(", ");
+                    if (arr && arr.length) {
+                        return arr.join(", ");                        
+                    }
                 },
 
                 _toLowerCase: function(text) {
