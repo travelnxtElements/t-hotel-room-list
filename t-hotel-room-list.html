@@ -39,7 +39,10 @@
 	    </t-overlay>
 	    <iron-list items="{{rooms}}">        
 			<template>
-				<t-hotel-room-item room="[[item]]" itinerary="[[itinerary]]" class="border-bottom">
+				<t-hotel-room-item 
+					room="[[item]]" 
+					stayDuration="[[stayDuration]]" 
+					class="border-bottom">
 				</t-hotel-room-item>
 			</template>
 	    </iron-list> 
@@ -65,9 +68,11 @@
 			auto: Boolean,
 
 			/**
-		     * Provide the Hotel details object. Ideally the One provided by the Mystique api.
+		     * Provide stayDuration in the Hotel details object. Ideally the One provided by the Mystique api.
 		     */ 
-			itinerary: Object
+			stayDuration: {
+	            type: Object
+        	}
 		},
 
 		_roomProvider: null,    
@@ -131,6 +136,5 @@
 	    	Polymer.dom(this.root).querySelector('t-hotel-room-policy-list').querySelector('#policyProvider').inventoryId = event.detail.id;	    	
 	    	Polymer.dom(this.root).querySelector('t-hotel-room-policy-list').showPolicies();	    	
 	    },
-
 	});	
 </script>

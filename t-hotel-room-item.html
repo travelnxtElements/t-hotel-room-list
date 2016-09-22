@@ -83,7 +83,7 @@
                         </template>
                     </div>
                     <span class="font-16 primary-text">{{_getDisplayFare(_displayPrice)}}</span>
-                    <div class="font-12 secondary-text">{{_getDisplayNightsCount(itinerary.stayDuration.start.date, itinerary.stayDuration.end.date)}}</div>
+                    <div class="font-12 secondary-text">{{_getDisplayNightsCount(stayDuration.start.date, stayDuration.end.date)}}</div>
                 </div>
             </div>
             <div class="layout horizontal end">
@@ -114,8 +114,12 @@ Polymer({
             }
         },
 
-        /*Pass the itinerary object with data of Journey. Component is designed as the object mystique API provides for the current Journey.*/
-        itinerary: Object
+        /**
+         * Provide stayDuration in the Hotel details object. Ideally the One provided by the Mystique api.
+         */ 
+        stayDuration: {
+            type: Object
+        }
     },
 
     observers: ['_fareComponentsChanged(room.fare.components)'],

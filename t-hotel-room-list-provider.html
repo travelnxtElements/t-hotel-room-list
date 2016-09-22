@@ -29,7 +29,7 @@ Polymer({
         /**
          * Selected hotel inventory id returned in listing response
          */
-        inventoryId: String,
+        itineraryId: String,
 
         /**
          * This is by default set to true and cannot be set to false
@@ -62,22 +62,19 @@ Polymer({
         this._setAjaxCall(this.$.ajaxCall);
     },
 
-    singleAvail: function(){
-        var provider = this;
-        
-        var buildReq = function(provider){
-            var serviceModel = {
-                "searchId": provider.searchId,
-                "inventoryId": provider.inventoryId,
-                "fetchAllAvailableRooms": provider.fetchAllAvailableRooms
-            };
-            return serviceModel;  
-        }
+    singleAvail: function() {
+
+        var serviceModel = {
+            searchId: this.searchId,
+            inventoryId: this.itineraryId,
+            fetchAllAvailableRooms: this.fetchAllAvailableRooms
+        };
         
         //validate api data before initiating call
         if(this._validateApiMeta()){
             this.$.ajaxCall.url = this._getUrl();
-            this.$.ajaxCall.body = JSON.stringify(buildReq(this));
+            this.$.ajaxCall.body = JSON.stringify(serviceModel);
+            this._setLoading(true);
             this.$.ajaxCall.generateRequest();
         }
     },
