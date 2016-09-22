@@ -86,6 +86,7 @@
                 },
 
                 _successCallback: function(event){
+                    this._successHandler(event);
                     if(!event.detail.response || !event.detail.response.status)
                         this.fire('error', 'Operation error occured, please try again.', { bubbles: false });
                     else if(!event.detail.response.status.isSuccessful){
@@ -97,6 +98,7 @@
                 },
 
                 _errorCallback: function(event){
+                    this._errorHandler(event);
                     this.fire('error', 'Connection error occured, please try again.', { bubbles: false })
                 }
             });            
