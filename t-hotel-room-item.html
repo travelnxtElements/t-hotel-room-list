@@ -98,120 +98,126 @@
             </div>
         </div>
     </template>
+    <script>
+        (function () {
+
+            'use strict'
+
+            Polymer({
+
+                is: 't-hotel-room-item',
+
+                properties: {
+
+                    /*Pass the Room object with data of different rooms available in Hotel. Component is designed as the object mystique API provides for different rooms available in Hotel.*/
+                    room: {
+                        type: Object,
+                        value: function() {
+                            return {};
+                        }
+                    },
+
+                    /**
+                     * Provide stayDuration in the Hotel details object. Ideally the One provided by the Mystique api.
+                     */ 
+                    stayDuration: {
+                        type: Object
+                    }
+                },
+
+                observers: ['_fareComponentsChanged(room.fare.components)'],
+
+                behaviors: [TravelNxt.Behaviors.FareBehavior],
+                
+                _getRoomInclusion:function(arr){
+                    return arr.join(", ");
+                },
+
+                _toLowerCase: function(text) {
+                    text = text || '';
+                    return text.toLowerCase();
+                },
+
+                _fareComponentsChanged: function(components) {
+                    this._components = components;
+                },
+
+                _getDisplayNightsCount: function(fromDate, toDate) {
+                    if (!fromDate || !toDate)
+                        return '';
+
+                    var count = this._dateDiff(fromDate, toDate);
+                    if (count > 1) {
+                        return "for " + count + " nights";
+                    } else {
+                        return "for " + count + " night";
+                    }
+                },
+
+                _dateDiff: function(fromDate, toDate) {
+                    if (typeof fromDate == 'string')
+                        fromDate = new Date(fromDate);
+                    if (typeof toDate == 'string')
+                        toDate = new Date(toDate);
+
+                    var diff = toDate - fromDate;
+                    var divideBy = (24 * 60 * 60 * 1000);
+
+                    return Math.floor(diff / divideBy);
+                },
+
+                _getDisplayFare: function(fare) {
+                    if (fare && fare.money) {
+                        return Math.ceil(fare.money.amount);
+                    }
+                    return null;
+                },
+
+                _isDiscountApplicable: function (strikeOffPrice, displayPrice) {
+                    return strikeOffPrice.money.amount > displayPrice.money.amount;
+                },
+
+                _bookRoom: function() {        
+                    this.querySelector('t-button').disabled = true;
+                    this.fire('room-select', this.room);
+                },
+
+                _showPolicy: function() {
+                    this.fire('room-policy', this.room)
+                },
+
+                _getPreferredDeal: function(deals) {
+                    if (!deals || !deals.length)
+                        return;
+
+                    var types = ['opaquedeal', 'placeholderforanytype', 'flatratedeal', 'percentagediscountdeal', 'discountdeal']; //low to high, placeholderforanytype is just to keep opaquedeal at low against any type
+
+                    deals.sort(function(a, b) {
+                        var aIndex = types.indexOf(a.type.toLowerCase());
+                        var bIndex = types.indexOf(b.type.toLowerCase());
+                        //set rank for random deal type higher than opaquedeal
+                        if (aIndex == -1) {
+                            aIndex = types.indexOf('placeholderforanytype');
+                        }
+                        if (bIndex == -1) {
+                            bIndex = types.indexOf('placeholderforanytype');
+                        }
+
+                        //set lesser rank if deal name is missing
+                        if (!b.name) {
+                            bIndex = aIndex - 1;
+                        }
+                        if (!a.name) {
+                            aIndex = bIndex - 1;
+                        }
+
+                        return bIndex - aIndex
+                    });
+
+                    return [deals[0]];
+                }
+            });
+            
+        })();
+    </script>
 </dom-module>
-<script>
-Polymer({
-
-    is: 't-hotel-room-item',
-
-    properties: {
-
-        /*Pass the Room object with data of different rooms available in Hotel. Component is designed as the object mystique API provides for different rooms available in Hotel.*/
-        room: {
-            type: Object,
-            value: function() {
-                return {};
-            }
-        },
-
-        /**
-         * Provide stayDuration in the Hotel details object. Ideally the One provided by the Mystique api.
-         */ 
-        stayDuration: {
-            type: Object
-        }
-    },
-
-    observers: ['_fareComponentsChanged(room.fare.components)'],
-
-    behaviors: [TravelNxt.Behaviors.FareBehavior],
-    
-    _getRoomInclusion:function(arr){
-        return arr.join(", ");
-    },
-
-    _toLowerCase: function(text) {
-        text = text || '';
-        return text.toLowerCase();
-    },
-
-    _fareComponentsChanged: function(components) {
-        this._components = components;
-    },
-
-    _getDisplayNightsCount: function(fromDate, toDate) {
-        if (!fromDate || !toDate)
-            return '';
-
-        var count = this._dateDiff(fromDate, toDate);
-        if (count > 1) {
-            return "for " + count + " nights";
-        } else {
-            return "for " + count + " night";
-        }
-    },
-
-    _dateDiff: function(fromDate, toDate) {
-        if (typeof fromDate == 'string')
-            fromDate = new Date(fromDate);
-        if (typeof toDate == 'string')
-            toDate = new Date(toDate);
-
-        var diff = toDate - fromDate;
-        var divideBy = (24 * 60 * 60 * 1000);
-
-        return Math.floor(diff / divideBy);
-    },
-
-    _getDisplayFare: function(fare) {
-        if (fare && fare.money) {
-            return Math.ceil(fare.money.amount);
-        }
-        return null;
-    },
-
-    _isDiscountApplicable: function (strikeOffPrice, displayPrice) {
-        return strikeOffPrice.money.amount > displayPrice.money.amount;
-    },
-
-    _bookRoom: function() {        
-        this.querySelector('t-button').disabled = true;
-        this.fire('room-select', this.room);
-    },
-
-    _showPolicy: function() {
-        this.fire('room-policy', this.room)
-    },
-
-    _getPreferredDeal: function(deals) {
-        if (!deals || !deals.length)
-            return;
-
-        var types = ['opaquedeal', 'placeholderforanytype', 'flatratedeal', 'percentagediscountdeal', 'discountdeal']; //low to high, placeholderforanytype is just to keep opaquedeal at low against any type
-
-        deals.sort(function(a, b) {
-            var aIndex = types.indexOf(a.type.toLowerCase());
-            var bIndex = types.indexOf(b.type.toLowerCase());
-            //set rank for random deal type higher than opaquedeal
-            if (aIndex == -1) {
-                aIndex = types.indexOf('placeholderforanytype');
-            }
-            if (bIndex == -1) {
-                bIndex = types.indexOf('placeholderforanytype');
-            }
-
-            //set lesser rank if deal name is missing
-            if (!b.name) {
-                bIndex = aIndex - 1;
-            }
-            if (!a.name) {
-                aIndex = bIndex - 1;
-            }
-
-            return bIndex - aIndex
-        });
-
-        return [deals[0]];
-    }
-});
-</script>
